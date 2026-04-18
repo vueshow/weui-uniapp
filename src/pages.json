@@ -183,6 +183,13 @@
 			}
 		},
 		{
+			"path": "pages/form-preview/index",
+			"style": {
+				"navigationBarTitleText": "Preview 表单预览",
+				"navigationStyle": "custom"
+			}
+		},
+		{
 			"path": "pages/toptips/index",
 			"style": {
 				"navigationBarTitleText": "Toptips 顶部提示",

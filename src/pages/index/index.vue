@@ -207,6 +207,14 @@
         @click="goForm"
       />
       <weui-cell
+        title="Preview 表单预览"
+        label="金额、明细、操作按钮"
+        value="查看"
+        arrow
+        clickable
+        @click="goFormPreview"
+      />
+      <weui-cell
         title="Toptips 顶部提示"
         label="错误、普通、成功提示"
         value="查看"
@@ -361,6 +369,9 @@ export default {
     },
     goForm() {
       this.go('/pages/form/index')
+    },
+    goFormPreview() {
+      this.go('/pages/form-preview/index')
     },
     goToptips() {
       this.go('/pages/toptips/index')

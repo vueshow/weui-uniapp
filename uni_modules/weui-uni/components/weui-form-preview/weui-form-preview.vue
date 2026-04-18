@@ -1,6 +1,6 @@
 <template>
   <view class="weui-form-preview">
-    <view v-if="label || value || $slots.header" class="weui-form-preview__hd">
+    <view v-if="label || value || $slots.header" role="option" class="weui-form-preview__hd">
       <slot name="header">
         <view class="weui-form-preview__item">
           <text class="weui-form-preview__label">{{ label }}</text>
@@ -9,7 +9,7 @@
       </slot>
     </view>
 
-    <view v-if="items.length || $slots.default" class="weui-form-preview__bd">
+    <view v-if="items.length || $slots.default" role="option" class="weui-form-preview__bd">
       <slot>
         <view
           v-for="(item, index) in items"
@@ -24,16 +24,17 @@
 
     <view v-if="actions.length || $slots.actions" class="weui-form-preview__ft">
       <slot name="actions">
-        <view
+        <button
           v-for="(action, index) in actions"
           :key="action.text || index"
           role="button"
           class="weui-form-preview__btn"
           :class="action.type === 'primary' ? 'weui-form-preview__btn_primary' : 'weui-form-preview__btn_default'"
+          hover-class="none"
           @click="handleAction(action, index)"
         >
           {{ action.text }}
-        </view>
+        </button>
       </slot>
     </view>
   </view>
@@ -68,3 +69,11 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.weui-form-preview__btn::after {
+  border-top: 0;
+  border-right: 0;
+  border-bottom: 0;
+}
+</style>
