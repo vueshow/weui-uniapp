@@ -102,6 +102,14 @@
         clickable
         @click="goSlider"
       />
+      <weui-cell
+        title="Uploader 上传"
+        label="图片选择、预览、删除"
+        value="查看"
+        arrow
+        clickable
+        @click="goUploader"
+      />
     </weui-cell-group>
   </view>
 </template>
@@ -154,6 +162,9 @@ export default {
     },
     goSlider() {
       this.go('/pages/slider/index')
+    },
+    goUploader() {
+      this.go('/pages/uploader/index')
     },
   },
 }

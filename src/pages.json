@@ -90,6 +90,13 @@
 				"navigationBarTitleText": "Slider 滑块",
 				"navigationStyle": "custom"
 			}
+		},
+		{
+			"path": "pages/uploader/index",
+			"style": {
+				"navigationBarTitleText": "Uploader 上传",
+				"navigationStyle": "custom"
+			}
 		}
 	],
 	"globalStyle": {
