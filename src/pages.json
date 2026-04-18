@@ -146,6 +146,13 @@
 				"navigationBarTitleText": "Footer 页脚",
 				"navigationStyle": "custom"
 			}
+		},
+		{
+			"path": "pages/flex/index",
+			"style": {
+				"navigationBarTitleText": "Flex 布局",
+				"navigationStyle": "custom"
+			}
 		}
 	],
 	"globalStyle": {

@@ -166,6 +166,14 @@
         clickable
         @click="goFooter"
       />
+      <weui-cell
+        title="Flex 布局"
+        label="等分、自适应"
+        value="查看"
+        arrow
+        clickable
+        @click="goFlex"
+      />
     </weui-cell-group>
   </view>
 </template>
@@ -242,6 +250,9 @@ export default {
     },
     goFooter() {
       this.go('/pages/footer/index')
+    },
+    goFlex() {
+      this.go('/pages/flex/index')
     },
   },
 }
