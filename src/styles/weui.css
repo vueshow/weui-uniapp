@@ -2865,7 +2865,7 @@ button.weui-vcode-btn {
 }
 
 .weui-switch[disabled],.weui-switch-cp__input[disabled]+.weui-switch-cp__box,.weui-switch-cp__input[aria-disabled="true"]+.weui-switch-cp__box {
-  opacity: 0.1;
+  opacity: 0.5;
 }
 
 .weui-switch-cp__input {

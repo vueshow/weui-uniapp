@@ -70,6 +70,14 @@
         clickable
         @click="goPicker"
       />
+      <weui-cell
+        title="Switch 开关"
+        label="开启、关闭、禁用"
+        value="查看"
+        arrow
+        clickable
+        @click="goSwitch"
+      />
     </weui-cell-group>
   </view>
 </template>
@@ -110,6 +118,9 @@ export default {
     },
     goPicker() {
       this.go('/pages/picker/index')
+    },
+    goSwitch() {
+      this.go('/pages/switch/index')
     },
   },
 }

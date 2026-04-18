@@ -62,6 +62,13 @@
 				"navigationBarTitleText": "Picker 选择器",
 				"navigationStyle": "custom"
 			}
+		},
+		{
+			"path": "pages/switch/index",
+			"style": {
+				"navigationBarTitleText": "Switch 开关",
+				"navigationStyle": "custom"
+			}
 		}
 	],
 	"globalStyle": {
