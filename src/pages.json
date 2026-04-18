@@ -118,6 +118,13 @@
 				"navigationBarTitleText": "Tabbar 底部导航",
 				"navigationStyle": "custom"
 			}
+		},
+		{
+			"path": "pages/navbar/index",
+			"style": {
+				"navigationBarTitleText": "Navbar 顶部导航",
+				"navigationStyle": "custom"
+			}
 		}
 	],
 	"globalStyle": {

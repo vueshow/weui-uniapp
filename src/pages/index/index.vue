@@ -134,6 +134,14 @@
         clickable
         @click="goTabbar"
       />
+      <weui-cell
+        title="Navbar 顶部导航"
+        label="页内选项切换"
+        value="查看"
+        arrow
+        clickable
+        @click="goNavbar"
+      />
     </weui-cell-group>
   </view>
 </template>
@@ -198,6 +206,9 @@ export default {
     },
     goTabbar() {
       this.go('/pages/tabbar/index')
+    },
+    goNavbar() {
+      this.go('/pages/navbar/index')
     },
   },
 }

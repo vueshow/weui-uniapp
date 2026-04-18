@@ -18,6 +18,7 @@ import WeuiUploader from './components/weui-uploader/weui-uploader.vue';
 import WeuiGallery from './components/weui-gallery/weui-gallery.vue';
 import WeuiProgress from './components/weui-progress/weui-progress.vue';
 import WeuiTabbar from './components/weui-tabbar/weui-tabbar.vue';
+import WeuiNavbar from './components/weui-navbar/weui-navbar.vue';
 
 const components = [
   WeuiButton,
@@ -40,6 +41,7 @@ const components = [
   WeuiGallery,
   WeuiProgress,
   WeuiTabbar,
+  WeuiNavbar,
 ];
 
 export {
@@ -63,6 +65,7 @@ export {
   WeuiGallery,
   WeuiProgress,
   WeuiTabbar,
+  WeuiNavbar,
 };
 
 export default {
