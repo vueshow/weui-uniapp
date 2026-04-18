@@ -198,6 +198,14 @@
         clickable
         @click="goSearchbar"
       />
+      <weui-cell
+        title="Form 表单"
+        label="表单结构、控件、预览"
+        value="查看"
+        arrow
+        clickable
+        @click="goForm"
+      />
     </weui-cell-group>
   </view>
 </template>
@@ -286,6 +294,9 @@ export default {
     },
     goSearchbar() {
       this.go('/pages/searchbar/index')
+    },
+    goForm() {
+      this.go('/pages/form/index')
     },
   },
 }
