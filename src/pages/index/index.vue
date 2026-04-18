@@ -110,6 +110,14 @@
         clickable
         @click="goUploader"
       />
+      <weui-cell
+        title="Gallery 画廊"
+        label="大图预览、删除"
+        value="查看"
+        arrow
+        clickable
+        @click="goGallery"
+      />
     </weui-cell-group>
   </view>
 </template>
@@ -165,6 +173,9 @@ export default {
     },
     goUploader() {
       this.go('/pages/uploader/index')
+    },
+    goGallery() {
+      this.go('/pages/gallery/index')
     },
   },
 }

@@ -15,6 +15,7 @@ import WeuiCheckbox from './components/weui-checkbox/weui-checkbox.vue';
 import WeuiRadio from './components/weui-radio/weui-radio.vue';
 import WeuiSlider from './components/weui-slider/weui-slider.vue';
 import WeuiUploader from './components/weui-uploader/weui-uploader.vue';
+import WeuiGallery from './components/weui-gallery/weui-gallery.vue';
 
 const components = [
   WeuiButton,
@@ -34,6 +35,7 @@ const components = [
   WeuiRadio,
   WeuiSlider,
   WeuiUploader,
+  WeuiGallery,
 ];
 
 export {
@@ -54,6 +56,7 @@ export {
   WeuiRadio,
   WeuiSlider,
   WeuiUploader,
+  WeuiGallery,
 };
 
 export default {

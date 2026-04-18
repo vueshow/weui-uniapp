@@ -67,6 +67,11 @@ export default {
       type: Array,
       default: () => ['original', 'compressed'],
     },
+    previewMode: {
+      type: String,
+      default: 'native',
+      validator: (value) => ['native', 'custom', 'none'].includes(value),
+    },
   },
   emits: ['update:modelValue', 'change', 'delete', 'preview', 'choose'],
   computed: {
@@ -112,6 +117,9 @@ export default {
         return;
       }
       this.$emit('preview', index);
+      if (this.previewMode !== 'native') {
+        return;
+      }
       uni.previewImage({
         current,
         urls: this.fileList.map((file) => file.url).filter(Boolean),
