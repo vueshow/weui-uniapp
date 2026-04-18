@@ -230,6 +230,14 @@
         clickable
         @click="goLoadmore"
       />
+      <weui-cell
+        title="Icons 图标"
+        label="消息图标、常用小图标"
+        value="查看"
+        arrow
+        clickable
+        @click="goIcons"
+      />
     </weui-cell-group>
   </view>
 </template>
@@ -330,6 +338,9 @@ export default {
     },
     goLoadmore() {
       this.go('/pages/loadmore/index')
+    },
+    goIcons() {
+      this.go('/pages/icons/index')
     },
   },
 }

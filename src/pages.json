@@ -202,6 +202,13 @@
 				"navigationBarTitleText": "Loadmore 加载更多",
 				"navigationStyle": "custom"
 			}
+		},
+		{
+			"path": "pages/icons/index",
+			"style": {
+				"navigationBarTitleText": "Icons 图标",
+				"navigationStyle": "custom"
+			}
 		}
 	],
 	"globalStyle": {
