@@ -1,452 +1,252 @@
 <template>
-  <view class="weui-uni-page nav-page">
-    <view class="hero">
-      <view class="hero__title">WeUI UniApp 组件库</view>
-      <view class="hero__desc">一个组件一个演示页面，便于逐步扩展和验收。</view>
+  <view class="page home">
+    <view class="page__hd">
+      <view class="page__title">
+        <image class="page__logo" src="/static/weui-home/logo.png" mode="heightFix" />
+      </view>
+      <view class="page__desc">
+        WeUI 是一套同微信原生视觉体验一致的基础样式库，由微信官方设计团队为微信内网页和微信小程序量身设计，令用户的使用感知更加统一。
+      </view>
     </view>
 
-    <weui-cell-group title="基础组件" tips="先完善 button，其它组件按同样模式扩展">
-      <weui-cell
-        title="Button 按钮"
-        label="类型、尺寸、状态、事件"
-        value="查看"
-        arrow
-        clickable
-        @click="goButton"
-      />
-      <weui-cell
-        title="Loading 加载"
-        label="loading、mask loading、品牌色"
-        value="查看"
-        arrow
-        clickable
-        @click="goLoading"
-      />
-      <weui-cell
-        title="Cell 列表项"
-        label="普通、带图标、带跳转"
-        value="查看"
-        arrow
-        clickable
-        @click="goCell"
-      />
-      <weui-cell
-        title="Input 输入框"
-        label="文本框、表单、验证码位"
-        value="查看"
-        arrow
-        clickable
-        @click="goInput"
-      />
-      <weui-cell
-        title="List 列表"
-        label="文字组合、图文组合"
-        value="查看"
-        arrow
-        clickable
-        @click="goList"
-      />
-      <weui-cell
-        title="Toast 提示"
-        label="成功、失败、加载、文字提示"
-        value="查看"
-        arrow
-        clickable
-        @click="goToast"
-      />
-      <weui-cell
-        title="Dialog 对话框"
-        label="样式一、样式二、样式三"
-        value="查看"
-        arrow
-        clickable
-        @click="goDialog"
-      />
-      <weui-cell
-        title="Picker 选择器"
-        label="单列、多列、日期、时间"
-        value="查看"
-        arrow
-        clickable
-        @click="goPicker"
-      />
-      <weui-cell
-        title="Switch 开关"
-        label="开启、关闭、禁用"
-        value="查看"
-        arrow
-        clickable
-        @click="goSwitch"
-      />
-      <weui-cell
-        title="Checkbox 复选框"
-        label="复选列表项、禁用状态"
-        value="查看"
-        arrow
-        clickable
-        @click="goCheckbox"
-      />
-      <weui-cell
-        title="Radio 单选框"
-        label="单选列表项、禁用状态"
-        value="查看"
-        arrow
-        clickable
-        @click="goRadio"
-      />
-      <weui-cell
-        title="Slider 滑块"
-        label="拖动、数值、步进"
-        value="查看"
-        arrow
-        clickable
-        @click="goSlider"
-      />
-      <weui-cell
-        title="Uploader 上传"
-        label="图片选择、预览、删除"
-        value="查看"
-        arrow
-        clickable
-        @click="goUploader"
-      />
-      <weui-cell
-        title="Gallery 画廊"
-        label="大图预览、删除"
-        value="查看"
-        arrow
-        clickable
-        @click="goGallery"
-      />
-      <weui-cell
-        title="Progress 进度条"
-        label="进度展示、取消操作"
-        value="查看"
-        arrow
-        clickable
-        @click="goProgress"
-      />
-      <weui-cell
-        title="Tabbar 底部导航"
-        label="选项、徽标、红点"
-        value="查看"
-        arrow
-        clickable
-        @click="goTabbar"
-      />
-      <weui-cell
-        title="Navbar 顶部导航"
-        label="页内选项切换"
-        value="查看"
-        arrow
-        clickable
-        @click="goNavbar"
-      />
-      <weui-cell
-        title="Grid 九宫格"
-        label="宫格入口"
-        value="查看"
-        arrow
-        clickable
-        @click="goGrid"
-      />
-      <weui-cell
-        title="Article 文章"
-        label="标题、段落、图片、列表"
-        value="查看"
-        arrow
-        clickable
-        @click="goArticle"
-      />
-      <weui-cell
-        title="Footer 页脚"
-        label="版权、链接、固定底部"
-        value="查看"
-        arrow
-        clickable
-        @click="goFooter"
-      />
-      <weui-cell
-        title="Flex 布局"
-        label="等分、自适应"
-        value="查看"
-        arrow
-        clickable
-        @click="goFlex"
-      />
-      <weui-cell
-        title="ActionSheet 弹出菜单"
-        label="iOS、Android 样式"
-        value="查看"
-        arrow
-        clickable
-        @click="goActionsheet"
-      />
-      <weui-cell
-        title="Msg 提示页"
-        label="成功、失败、无图标、扩展信息"
-        value="查看"
-        arrow
-        clickable
-        @click="goMsg"
-      />
-      <weui-cell
-        title="SearchBar 搜索栏"
-        label="Filled、Grey、Outlined、Homepage"
-        value="查看"
-        arrow
-        clickable
-        @click="goSearchbar"
-      />
-      <weui-cell
-        title="Form 表单"
-        label="表单结构、控件、预览"
-        value="查看"
-        arrow
-        clickable
-        @click="goForm"
-      />
-      <weui-cell
-        title="Preview 表单预览"
-        label="金额、明细、操作按钮"
-        value="查看"
-        arrow
-        clickable
-        @click="goFormPreview"
-      />
-      <weui-cell
-        title="Toptips 顶部提示"
-        label="错误、普通、成功提示"
-        value="查看"
-        arrow
-        clickable
-        @click="goToptips"
-      />
-      <weui-cell
-        title="Badge 徽章"
-        label="数字、红点、列表提示"
-        value="查看"
-        arrow
-        clickable
-        @click="goBadge"
-      />
-      <weui-cell
-        title="Loadmore 加载更多"
-        label="加载中、暂无数据、分割线"
-        value="查看"
-        arrow
-        clickable
-        @click="goLoadmore"
-      />
-      <weui-cell
-        title="Icons 图标"
-        label="消息图标、常用小图标"
-        value="查看"
-        arrow
-        clickable
-        @click="goIcons"
-      />
-      <weui-cell
-        title="Half-screen Dialog 半屏组件"
-        label="半屏弹层、底部操作、抓手"
-        value="查看"
-        arrow
-        clickable
-        @click="goHalfScreenDialog"
-      />
-      <weui-cell
-        title="Agree 协议勾选"
-        label="协议、警告、禁用状态"
-        value="查看"
-        arrow
-        clickable
-        @click="goAgree"
-      />
-      <weui-cell
-        title="Information Bar 信息提示条"
-        label="warn、tips、强弱提示"
-        value="查看"
-        arrow
-        clickable
-        @click="goInformationBar"
-      />
-      <weui-cell
-        title="List Tips 列表提示"
-        label="消息页自定义提示列表"
-        value="查看"
-        arrow
-        clickable
-        @click="goListTips"
-      />
-      <weui-cell
-        title="Steps 步骤条"
-        label="垂直型、水平型"
-        value="查看"
-        arrow
-        clickable
-        @click="goSteps"
-      />
-      <weui-cell
-        title="Empty State 空状态"
-        label="空列表、无结果、异常状态"
-        value="查看"
-        arrow
-        clickable
-        @click="goEmptyState"
-      />
-    </weui-cell-group>
+    <view class="page__bd page__bd_spacing">
+      <view role="menubar" aria-label="WeUI组件列表">
+        <view
+          v-for="(category, index) in categories"
+          :key="category.name"
+          class="category"
+          :class="{ js_show: activeCategory === index }"
+          role="none"
+        >
+          <view
+            class="weui-flex js_category"
+            role="button"
+            :aria-expanded="(activeCategory === index).toString()"
+            @click="toggleCategory(index)"
+          >
+            <view class="weui-flex__item">{{ category.name }}</view>
+            <image class="category__icon" :src="category.icon" mode="aspectFit" />
+          </view>
+          <view class="page__category" :aria-hidden="(activeCategory !== index).toString()">
+            <view class="weui-cells page__category-content">
+              <view
+                v-for="item in category.items"
+                :key="item.name"
+                class="weui-cell weui-cell_active weui-cell_access js_item"
+                role="menuitem"
+                @click="go(item.path)"
+              >
+                <view class="weui-cell__bd">
+                  <view>{{ item.name }}</view>
+                </view>
+                <view class="weui-cell__ft" />
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
   </view>
 </template>
 
 <script>
+const iconBase = '/static/weui-home/';
+
 export default {
+  data() {
+    return {
+      activeCategory: -1,
+      categories: [
+        {
+          name: '表单',
+          icon: `${iconBase}icon_nav_form.png`,
+          items: [
+            { name: 'Button', path: '/pages/button/index' },
+            { name: 'Form', path: '/pages/form/index' },
+            { name: 'List', path: '/pages/list/index' },
+            { name: 'Slider', path: '/pages/slider/index' },
+            { name: 'Uploader', path: '/pages/uploader/index' },
+          ],
+        },
+        {
+          name: '基础组件',
+          icon: `${iconBase}icon_nav_layout.png`,
+          items: [
+            { name: 'Article', path: '/pages/article/index' },
+            { name: 'Badge', path: '/pages/badge/index' },
+            { name: 'Flex', path: '/pages/flex/index' },
+            { name: 'Footer', path: '/pages/footer/index' },
+            { name: 'Gallery', path: '/pages/gallery/index' },
+            { name: 'Grid', path: '/pages/grid/index' },
+            { name: 'Icons', path: '/pages/icons/index' },
+            { name: 'Loading', path: '/pages/loading/index' },
+            { name: 'Loadmore', path: '/pages/loadmore/index' },
+            { name: 'Panel', path: '/pages/list/index' },
+            { name: 'Preview', path: '/pages/form-preview/index' },
+            { name: 'Progress', path: '/pages/progress/index' },
+            { name: 'Steps', path: '/pages/steps/index' },
+          ],
+        },
+        {
+          name: '操作反馈',
+          icon: `${iconBase}icon_nav_feedback.png`,
+          items: [
+            { name: 'Actionsheet', path: '/pages/actionsheet/index' },
+            { name: 'Dialog', path: '/pages/dialog/index' },
+            { name: 'Half-screen Dialog', path: '/pages/half-screen-dialog/index' },
+            { name: 'Msg', path: '/pages/msg/index' },
+            { name: 'Picker', path: '/pages/picker/index' },
+            { name: 'Toast', path: '/pages/toast/index' },
+            { name: 'Information Bar', path: '/pages/information-bar/index' },
+          ],
+        },
+        {
+          name: '导航相关',
+          icon: `${iconBase}icon_nav_nav.png`,
+          items: [
+            { name: 'Navbar', path: '/pages/navbar/index' },
+            { name: 'Tabbar', path: '/pages/tabbar/index' },
+          ],
+        },
+        {
+          name: '搜索相关',
+          icon: `${iconBase}icon_nav_search.png`,
+          items: [
+            { name: 'Search Bar', path: '/pages/searchbar/index' },
+          ],
+        },
+      ],
+    };
+  },
   methods: {
+    toggleCategory(index) {
+      this.activeCategory = this.activeCategory === index ? -1 : index;
+    },
     go(url) {
       uni.navigateTo({
         url,
         fail: () => {
           if (typeof window !== 'undefined') {
-            window.location.hash = `#${url}`
+            window.location.hash = `#${url}`;
           }
         },
-      })
-    },
-    goButton() {
-      this.go('/pages/button/index')
-    },
-    goLoading() {
-      this.go('/pages/loading/index')
-    },
-    goCell() {
-      this.go('/pages/cell/index')
-    },
-    goInput() {
-      this.go('/pages/input/index')
-    },
-    goList() {
-      this.go('/pages/list/index')
-    },
-    goToast() {
-      this.go('/pages/toast/index')
-    },
-    goDialog() {
-      this.go('/pages/dialog/index')
-    },
-    goPicker() {
-      this.go('/pages/picker/index')
-    },
-    goSwitch() {
-      this.go('/pages/switch/index')
-    },
-    goCheckbox() {
-      this.go('/pages/checkbox/index')
-    },
-    goRadio() {
-      this.go('/pages/radio/index')
-    },
-    goSlider() {
-      this.go('/pages/slider/index')
-    },
-    goUploader() {
-      this.go('/pages/uploader/index')
-    },
-    goGallery() {
-      this.go('/pages/gallery/index')
-    },
-    goProgress() {
-      this.go('/pages/progress/index')
-    },
-    goTabbar() {
-      this.go('/pages/tabbar/index')
-    },
-    goNavbar() {
-      this.go('/pages/navbar/index')
-    },
-    goGrid() {
-      this.go('/pages/grid/index')
-    },
-    goArticle() {
-      this.go('/pages/article/index')
-    },
-    goFooter() {
-      this.go('/pages/footer/index')
-    },
-    goFlex() {
-      this.go('/pages/flex/index')
-    },
-    goActionsheet() {
-      this.go('/pages/actionsheet/index')
-    },
-    goMsg() {
-      this.go('/pages/msg/index')
-    },
-    goSearchbar() {
-      this.go('/pages/searchbar/index')
-    },
-    goForm() {
-      this.go('/pages/form/index')
-    },
-    goFormPreview() {
-      this.go('/pages/form-preview/index')
-    },
-    goToptips() {
-      this.go('/pages/toptips/index')
-    },
-    goBadge() {
-      this.go('/pages/badge/index')
-    },
-    goLoadmore() {
-      this.go('/pages/loadmore/index')
-    },
-    goIcons() {
-      this.go('/pages/icons/index')
-    },
-    goHalfScreenDialog() {
-      this.go('/pages/half-screen-dialog/index')
-    },
-    goAgree() {
-      this.go('/pages/agree/index')
-    },
-    goInformationBar() {
-      this.go('/pages/information-bar/index')
-    },
-    goListTips() {
-      this.go('/pages/list-tips/index')
-    },
-    goSteps() {
-      this.go('/pages/steps/index')
-    },
-    goEmptyState() {
-      this.go('/pages/empty-state/index')
+      });
     },
   },
-}
+};
 </script>
 
 <style>
-.nav-page {
+.page.home {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   box-sizing: border-box;
-  min-height: 100vh;
-  padding-top: 12px;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  background-color: var(--weui-BG-0);
+  color: var(--weui-FG-0);
+  line-height: 1.6;
 }
 
-.hero {
-  margin: 12px 16px 0;
-  padding: 20px 16px;
-  border-radius: 12px;
-  background: linear-gradient(135deg, #e6f7ef, #f4fbf7);
+.page__hd {
+  padding: 40px;
 }
 
-.hero__title {
-  color: #0b5e36;
-  font-size: 20px;
-  font-weight: 600;
+.page__title {
+  margin-bottom: 15px;
+  font-size: 0;
+  text-align: left;
 }
 
-.hero__desc {
-  margin-top: 8px;
-  color: #2c6b4f;
+.page__logo {
+  height: 21px;
+  vertical-align: top;
+}
+
+.page__desc {
+  margin-top: 4px;
+  color: var(--weui-FG-1);
+  text-align: left;
   font-size: 14px;
-  line-height: 1.5;
+  line-height: 1.6;
+}
+
+.page__bd_spacing {
+  padding: 0 16px;
+}
+
+.category {
+  margin: 8px 0;
+  overflow: hidden;
+  border-radius: 2px;
+  background-color: var(--weui-BG-2);
+  cursor: default;
+}
+
+.category:first-child {
+  margin-top: 0;
+}
+
+.category.js_show .js_category {
+  opacity: 0.5;
+}
+
+.category.js_show .page__category {
+  height: auto;
+}
+
+.category.js_show .page__category-content {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.js_category {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  transition: 0.3s;
+}
+
+.js_category:active {
+  background-color: var(--weui-BG-COLOR-ACTIVE);
+}
+
+.weui-flex__item {
+  flex: 1;
+}
+
+.category__icon {
+  width: 30px;
+  height: 30px;
+}
+
+.page__category {
+  height: 0;
+  overflow: hidden;
+}
+
+.page__category-content {
+  margin-top: 0;
+  opacity: 0;
+  transform: translateY(-50%);
+  transition: 0.3s;
+}
+
+.page__category-content::before,
+.page__category-content::after {
+  display: none;
+}
+
+.page__category-content .weui-cell {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.page__category-content .weui-cell::before {
+  left: 20px;
+  right: 20px;
 }
 </style>
