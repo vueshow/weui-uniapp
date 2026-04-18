@@ -251,6 +251,13 @@
 				"navigationBarTitleText": "Steps 步骤条",
 				"navigationStyle": "custom"
 			}
+		},
+		{
+			"path": "pages/empty-state/index",
+			"style": {
+				"navigationBarTitleText": "Empty State 空状态",
+				"navigationStyle": "custom"
+			}
 		}
 	],
 	"globalStyle": {

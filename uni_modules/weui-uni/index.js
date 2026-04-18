@@ -36,6 +36,7 @@ import WeuiAgree from './components/weui-agree/weui-agree.vue';
 import WeuiInformationBar from './components/weui-information-bar/weui-information-bar.vue';
 import WeuiListTips from './components/weui-list-tips/weui-list-tips.vue';
 import WeuiSteps from './components/weui-steps/weui-steps.vue';
+import WeuiEmptyState from './components/weui-empty-state/weui-empty-state.vue';
 
 const components = [
   WeuiButton,
@@ -76,6 +77,7 @@ const components = [
   WeuiInformationBar,
   WeuiListTips,
   WeuiSteps,
+  WeuiEmptyState,
 ];
 
 export {
@@ -117,6 +119,7 @@ export {
   WeuiInformationBar,
   WeuiListTips,
   WeuiSteps,
+  WeuiEmptyState,
 };
 
 export default {

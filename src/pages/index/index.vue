@@ -286,6 +286,14 @@
         clickable
         @click="goSteps"
       />
+      <weui-cell
+        title="Empty State 空状态"
+        label="空列表、无结果、异常状态"
+        value="查看"
+        arrow
+        clickable
+        @click="goEmptyState"
+      />
     </weui-cell-group>
   </view>
 </template>
@@ -407,6 +415,9 @@ export default {
     },
     goSteps() {
       this.go('/pages/steps/index')
+    },
+    goEmptyState() {
+      this.go('/pages/empty-state/index')
     },
   },
 }
