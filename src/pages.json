@@ -188,6 +188,13 @@
 				"navigationBarTitleText": "Toptips 顶部提示",
 				"navigationStyle": "custom"
 			}
+		},
+		{
+			"path": "pages/badge/index",
+			"style": {
+				"navigationBarTitleText": "Badge 徽章",
+				"navigationStyle": "custom"
+			}
 		}
 	],
 	"globalStyle": {

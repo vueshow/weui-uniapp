@@ -214,6 +214,14 @@
         clickable
         @click="goToptips"
       />
+      <weui-cell
+        title="Badge 徽章"
+        label="数字、红点、列表提示"
+        value="查看"
+        arrow
+        clickable
+        @click="goBadge"
+      />
     </weui-cell-group>
   </view>
 </template>
@@ -308,6 +316,9 @@ export default {
     },
     goToptips() {
       this.go('/pages/toptips/index')
+    },
+    goBadge() {
+      this.go('/pages/badge/index')
     },
   },
 }

@@ -1,7 +1,7 @@
 <template>
   <text
-    class="weui-uni-badge"
-    :class="[`weui-uni-badge_${type}`, { 'weui-uni-badge_dot': dot }]"
+    class="weui-badge"
+    :class="badgeClass"
   >
     <template v-if="!dot">{{ displayText }}</template>
   </text>
@@ -30,6 +30,13 @@ export default {
     },
   },
   computed: {
+    badgeClass() {
+      return {
+        'weui-badge_dot': this.dot,
+        'weui-badge_primary': this.type === 'primary',
+        'weui-badge_default': this.type === 'default',
+      };
+    },
     displayText() {
       const value = Number(this.text);
       if (!Number.isNaN(value) && value > this.max) {
@@ -41,42 +48,13 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
-@import '../../styles/theme.scss';
-
-.weui-uni-badge {
-  box-sizing: border-box;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 18px;
-  height: 18px;
-  padding: 0 5px;
-  border-radius: 9px;
-  color: #fff;
-  font-size: 12px;
-  line-height: 18px;
-  vertical-align: middle;
+<style scoped>
+.weui-badge_primary {
+  background-color: var(--weui-BRAND);
 }
 
-.weui-uni-badge_warn {
-  background-color: var(--weui-WARN, #{$weui-warn});
-}
-
-.weui-uni-badge_primary {
-  background-color: var(--weui-BRAND, #{$weui-brand});
-}
-
-.weui-uni-badge_default {
-  color: var(--weui-FG-1, #{$weui-fg-1});
-  background-color: var(--weui-FG-3, #{$weui-fg-3});
-}
-
-.weui-uni-badge_dot {
-  min-width: 8px;
-  width: 8px;
-  height: 8px;
-  padding: 0;
-  border-radius: 50%;
+.weui-badge_default {
+  color: var(--weui-FG-1);
+  background-color: var(--weui-FG-3);
 }
 </style>
