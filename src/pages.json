@@ -223,6 +223,13 @@
 				"navigationBarTitleText": "Agree 协议勾选",
 				"navigationStyle": "custom"
 			}
+		},
+		{
+			"path": "pages/information-bar/index",
+			"style": {
+				"navigationBarTitleText": "Information Bar 信息提示条",
+				"navigationStyle": "custom"
+			}
 		}
 	],
 	"globalStyle": {

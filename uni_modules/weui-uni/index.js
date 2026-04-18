@@ -33,6 +33,7 @@ import WeuiFormPreview from './components/weui-form-preview/weui-form-preview.vu
 import WeuiToptips from './components/weui-toptips/weui-toptips.vue';
 import WeuiHalfScreenDialog from './components/weui-half-screen-dialog/weui-half-screen-dialog.vue';
 import WeuiAgree from './components/weui-agree/weui-agree.vue';
+import WeuiInformationBar from './components/weui-information-bar/weui-information-bar.vue';
 
 const components = [
   WeuiButton,
@@ -70,6 +71,7 @@ const components = [
   WeuiToptips,
   WeuiHalfScreenDialog,
   WeuiAgree,
+  WeuiInformationBar,
 ];
 
 export {
@@ -108,6 +110,7 @@ export {
   WeuiToptips,
   WeuiHalfScreenDialog,
   WeuiAgree,
+  WeuiInformationBar,
 };
 
 export default {

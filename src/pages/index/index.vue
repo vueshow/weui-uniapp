@@ -254,6 +254,14 @@
         clickable
         @click="goAgree"
       />
+      <weui-cell
+        title="Information Bar 信息提示条"
+        label="warn、tips、强弱提示"
+        value="查看"
+        arrow
+        clickable
+        @click="goInformationBar"
+      />
     </weui-cell-group>
   </view>
 </template>
@@ -363,6 +371,9 @@ export default {
     },
     goAgree() {
       this.go('/pages/agree/index')
+    },
+    goInformationBar() {
+      this.go('/pages/information-bar/index')
     },
   },
 }
