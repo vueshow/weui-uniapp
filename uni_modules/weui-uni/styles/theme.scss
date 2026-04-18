@@ -1,0 +1,90 @@
+$weui-brand: #07c160 !default;
+$weui-warn: #fa5151 !default;
+$weui-link: #576b95 !default;
+$weui-bg-0: #ededed !default;
+$weui-bg-1: #f7f7f7 !default;
+$weui-bg-2: #fff !default;
+$weui-fg-0: rgba(0, 0, 0, 0.9) !default;
+$weui-fg-1: rgba(0, 0, 0, 0.55) !default;
+$weui-fg-2: rgba(0, 0, 0, 0.3) !default;
+$weui-fg-3: rgba(0, 0, 0, 0.1) !default;
+$weui-separator: rgba(0, 0, 0, 0.1) !default;
+
+@mixin weui-theme-vars {
+  --weui-BG-0: #ededed;
+  --weui-BG-1: #f7f7f7;
+  --weui-BG-2: #fff;
+  --weui-BRAND: #07c160;
+  --weui-BRAND-ACTIVE: #06ae56;
+  --weui-WARN: #fa5151;
+  --weui-WARN-ACTIVE: #e14949;
+  --weui-LINK: #576b95;
+  --weui-FG-0: rgba(0, 0, 0, 0.9);
+  --weui-FG-1: rgba(0, 0, 0, 0.55);
+  --weui-FG-2: rgba(0, 0, 0, 0.3);
+  --weui-FG-3: rgba(0, 0, 0, 0.1);
+  --weui-FG-4: rgba(0, 0, 0, 0.15);
+  --weui-FG-5: rgba(0, 0, 0, 0.05);
+  --weui-FG-WHITE: #fff;
+  --weui-BTN-ACTIVE-MASK: rgba(0, 0, 0, 0.2);
+  --weui-BTN-DEFAULT-ACTIVE-BG: rgba(0, 0, 0, 0.08);
+  --weui-SEPARATOR: rgba(0, 0, 0, 0.1);
+  --weui-CELL-HEIGHT: 56px;
+  --weui-CELL-GAP-H: 16px;
+  --weui-BTN-HEIGHT: 48;
+  --weui-BTN-HEIGHT-MEDIUM: 40;
+  --weui-BTN-HEIGHT-SMALL: 32;
+}
+
+@mixin weui-dark-vars {
+  --weui-BG-0: #111;
+  --weui-BG-1: #1e1e1e;
+  --weui-BG-2: #191919;
+  --weui-BRAND: #07c160;
+  --weui-BRAND-ACTIVE: #06ae56;
+  --weui-WARN: #fa5151;
+  --weui-WARN-ACTIVE: #e14949;
+  --weui-LINK: #7d90b3;
+  --weui-FG-0: rgba(255, 255, 255, 0.8);
+  --weui-FG-1: rgba(255, 255, 255, 0.5);
+  --weui-FG-2: rgba(255, 255, 255, 0.3);
+  --weui-FG-3: rgba(255, 255, 255, 0.1);
+  --weui-FG-4: rgba(255, 255, 255, 0.2);
+  --weui-FG-5: rgba(255, 255, 255, 0.08);
+  --weui-FG-WHITE: rgba(255, 255, 255, 0.8);
+  --weui-BTN-ACTIVE-MASK: rgba(255, 255, 255, 0.2);
+  --weui-BTN-DEFAULT-ACTIVE-BG: rgba(255, 255, 255, 0.12);
+  --weui-SEPARATOR: rgba(255, 255, 255, 0.1);
+}
+
+@mixin weui-care-vars {
+  --weui-CELL-HEIGHT: 64px;
+  --weui-CELL-GAP-H: 20px;
+  --weui-BTN-HEIGHT: 56;
+}
+
+@mixin weui-hairline($position: bottom) {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    left: 0;
+    @if $position == bottom {
+      bottom: 0;
+      top: auto;
+    } @else if $position == top {
+      top: 0;
+      bottom: auto;
+    } @else {
+      bottom: 0;
+      top: auto;
+    }
+    height: 1px;
+    background-color: var(--weui-SEPARATOR, #{$weui-separator});
+    transform: scaleY(0.5);
+    transform-origin: 0 100%;
+    pointer-events: none;
+  }
+}

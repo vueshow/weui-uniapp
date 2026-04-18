@@ -26,6 +26,13 @@
 				"navigationBarTitleText": "Cell 列表项",
 				"navigationStyle": "custom"
 			}
+		},
+		{
+			"path": "pages/input/index",
+			"style": {
+				"navigationBarTitleText": "Input 输入框",
+				"navigationStyle": "custom"
+			}
 		}
 	],
 	"globalStyle": {

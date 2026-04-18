@@ -5,7 +5,7 @@
       <view class="hero__desc">一个组件一个演示页面，便于逐步扩展和验收。</view>
     </view>
 
-    <weui-cells title="基础组件" tips="先完善 button，其它组件按同样模式扩展">
+    <weui-cell-group title="基础组件" tips="先完善 button，其它组件按同样模式扩展">
       <weui-cell
         title="Button 按钮"
         label="类型、尺寸、状态、事件"
@@ -30,7 +30,15 @@
         clickable
         @click="goCell"
       />
-    </weui-cells>
+      <weui-cell
+        title="Input 输入框"
+        label="文本框、表单、验证码位"
+        value="查看"
+        arrow
+        clickable
+        @click="goInput"
+      />
+    </weui-cell-group>
   </view>
 </template>
 
@@ -55,6 +63,9 @@ export default {
     },
     goCell() {
       this.go('/pages/cell/index')
+    },
+    goInput() {
+      this.go('/pages/input/index')
     },
   },
 }

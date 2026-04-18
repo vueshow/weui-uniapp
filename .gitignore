@@ -35,6 +35,3 @@ Thumbs.db
 *.sw?
 *.swp
 *~
-
-# UniApp
-uni_modules

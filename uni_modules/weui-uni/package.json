@@ -1,0 +1,21 @@
+{
+  "id": "weui-uni",
+  "displayName": "WeUI Uni",
+  "version": "0.1.0",
+  "description": "A uni-app component library wrapped from WeUI styles.",
+  "keywords": [
+    "weui",
+    "uni-app",
+    "vue3",
+    "wechat",
+    "ui"
+  ],
+  "repository": "https://github.com/weui/weui",
+  "license": "MIT",
+  "dcloudext": {
+    "category": [
+      "前端组件",
+      "通用组件"
+    ]
+  }
+}

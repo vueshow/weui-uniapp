@@ -5,12 +5,12 @@
       <view class="page__desc">列表</view>
     </view>
     <view class="page__bd">
-      <weui-cells title="带说明的列表项">
+      <weui-cell-group title="带说明的列表项">
         <weui-cell title="标题文字" value="说明文字" />
         <weui-cell title="标题文字" value="说明文字" />
-      </weui-cells>
+      </weui-cell-group>
 
-      <weui-cells title="带图标、说明的列表项">
+      <weui-cell-group title="带图标、说明的列表项">
         <weui-cell title="标题文字" value="说明文字">
           <template #icon>
             <image class="demo-icon" src="/static/logo.png" mode="aspectFit" />
@@ -21,17 +21,17 @@
             <image class="demo-icon" src="/static/logo.png" mode="aspectFit" />
           </template>
         </weui-cell>
-      </weui-cells>
+      </weui-cell-group>
 
-      <weui-cells title="带跳转的列表项">
+      <weui-cell-group title="带跳转的列表项">
         <weui-cell title="cell standard" label="副标题" arrow clickable @click="handleClick('access-subtitle')" />
         <weui-cell title="cell standard" arrow clickable @click="handleClick('access')" />
-      </weui-cells>
+      </weui-cell-group>
 
-      <weui-cells title="带说明、跳转的列表项">
+      <weui-cell-group title="带说明、跳转的列表项">
         <weui-cell title="cell standard" value="说明文字" arrow clickable @click="handleClick('access-value-1')" />
         <weui-cell title="cell standard" value="说明文字" arrow clickable @click="handleClick('access-value-2')" />
-      </weui-cells>
+      </weui-cell-group>
     </view>
   </view>
 </template>
