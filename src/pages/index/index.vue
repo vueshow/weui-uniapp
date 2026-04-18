@@ -190,6 +190,14 @@
         clickable
         @click="goMsg"
       />
+      <weui-cell
+        title="SearchBar 搜索栏"
+        label="Filled、Grey、Outlined、Homepage"
+        value="查看"
+        arrow
+        clickable
+        @click="goSearchbar"
+      />
     </weui-cell-group>
   </view>
 </template>
@@ -275,6 +283,9 @@ export default {
     },
     goMsg() {
       this.go('/pages/msg/index')
+    },
+    goSearchbar() {
+      this.go('/pages/searchbar/index')
     },
   },
 }

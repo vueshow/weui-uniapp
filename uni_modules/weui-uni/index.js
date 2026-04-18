@@ -27,6 +27,7 @@ import WeuiFlex from './components/weui-flex/weui-flex.vue';
 import WeuiFlexItem from './components/weui-flex-item/weui-flex-item.vue';
 import WeuiActionsheet from './components/weui-actionsheet/weui-actionsheet.vue';
 import WeuiMsg from './components/weui-msg/weui-msg.vue';
+import WeuiSearchbar from './components/weui-searchbar/weui-searchbar.vue';
 
 const components = [
   WeuiButton,
@@ -58,6 +59,7 @@ const components = [
   WeuiFlexItem,
   WeuiActionsheet,
   WeuiMsg,
+  WeuiSearchbar,
 ];
 
 export {
@@ -90,6 +92,7 @@ export {
   WeuiFlexItem,
   WeuiActionsheet,
   WeuiMsg,
+  WeuiSearchbar,
 };
 
 export default {

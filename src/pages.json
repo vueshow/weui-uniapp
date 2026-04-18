@@ -167,6 +167,13 @@
 				"navigationBarTitleText": "Msg 提示页",
 				"navigationStyle": "custom"
 			}
+		},
+		{
+			"path": "pages/searchbar/index",
+			"style": {
+				"navigationBarTitleText": "SearchBar 搜索栏",
+				"navigationStyle": "custom"
+			}
 		}
 	],
 	"globalStyle": {
