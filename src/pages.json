@@ -83,6 +83,13 @@
 				"navigationBarTitleText": "Radio 单选框",
 				"navigationStyle": "custom"
 			}
+		},
+		{
+			"path": "pages/slider/index",
+			"style": {
+				"navigationBarTitleText": "Slider 滑块",
+				"navigationStyle": "custom"
+			}
 		}
 	],
 	"globalStyle": {

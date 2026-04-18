@@ -94,6 +94,14 @@
         clickable
         @click="goRadio"
       />
+      <weui-cell
+        title="Slider 滑块"
+        label="拖动、数值、步进"
+        value="查看"
+        arrow
+        clickable
+        @click="goSlider"
+      />
     </weui-cell-group>
   </view>
 </template>
@@ -143,6 +151,9 @@ export default {
     },
     goRadio() {
       this.go('/pages/radio/index')
+    },
+    goSlider() {
+      this.go('/pages/slider/index')
     },
   },
 }
