@@ -150,6 +150,14 @@
         clickable
         @click="goGrid"
       />
+      <weui-cell
+        title="Article 文章"
+        label="标题、段落、图片、列表"
+        value="查看"
+        arrow
+        clickable
+        @click="goArticle"
+      />
     </weui-cell-group>
   </view>
 </template>
@@ -220,6 +228,9 @@ export default {
     },
     goGrid() {
       this.go('/pages/grid/index')
+    },
+    goArticle() {
+      this.go('/pages/article/index')
     },
   },
 }

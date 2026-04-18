@@ -132,6 +132,13 @@
 				"navigationBarTitleText": "Grid 九宫格",
 				"navigationStyle": "custom"
 			}
+		},
+		{
+			"path": "pages/article/index",
+			"style": {
+				"navigationBarTitleText": "Article 文章",
+				"navigationStyle": "custom"
+			}
 		}
 	],
 	"globalStyle": {

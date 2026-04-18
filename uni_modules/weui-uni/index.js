@@ -21,6 +21,7 @@ import WeuiTabbar from './components/weui-tabbar/weui-tabbar.vue';
 import WeuiNavbar from './components/weui-navbar/weui-navbar.vue';
 import WeuiGrid from './components/weui-grid/weui-grid.vue';
 import WeuiGridItem from './components/weui-grid-item/weui-grid-item.vue';
+import WeuiArticle from './components/weui-article/weui-article.vue';
 
 const components = [
   WeuiButton,
@@ -46,6 +47,7 @@ const components = [
   WeuiNavbar,
   WeuiGrid,
   WeuiGridItem,
+  WeuiArticle,
 ];
 
 export {
@@ -72,6 +74,7 @@ export {
   WeuiNavbar,
   WeuiGrid,
   WeuiGridItem,
+  WeuiArticle,
 };
 
 export default {
