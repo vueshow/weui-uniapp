@@ -160,6 +160,13 @@
 				"navigationBarTitleText": "ActionSheet 弹出菜单",
 				"navigationStyle": "custom"
 			}
+		},
+		{
+			"path": "pages/msg/index",
+			"style": {
+				"navigationBarTitleText": "Msg 提示页",
+				"navigationStyle": "custom"
+			}
 		}
 	],
 	"globalStyle": {

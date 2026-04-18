@@ -182,6 +182,14 @@
         clickable
         @click="goActionsheet"
       />
+      <weui-cell
+        title="Msg 提示页"
+        label="成功、失败、无图标、扩展信息"
+        value="查看"
+        arrow
+        clickable
+        @click="goMsg"
+      />
     </weui-cell-group>
   </view>
 </template>
@@ -264,6 +272,9 @@ export default {
     },
     goActionsheet() {
       this.go('/pages/actionsheet/index')
+    },
+    goMsg() {
+      this.go('/pages/msg/index')
     },
   },
 }
