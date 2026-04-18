@@ -262,6 +262,14 @@
         clickable
         @click="goInformationBar"
       />
+      <weui-cell
+        title="List Tips 列表提示"
+        label="消息页自定义提示列表"
+        value="查看"
+        arrow
+        clickable
+        @click="goListTips"
+      />
     </weui-cell-group>
   </view>
 </template>
@@ -374,6 +382,9 @@ export default {
     },
     goInformationBar() {
       this.go('/pages/information-bar/index')
+    },
+    goListTips() {
+      this.go('/pages/list-tips/index')
     },
   },
 }

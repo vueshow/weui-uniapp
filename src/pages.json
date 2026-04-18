@@ -230,6 +230,13 @@
 				"navigationBarTitleText": "Information Bar 信息提示条",
 				"navigationStyle": "custom"
 			}
+		},
+		{
+			"path": "pages/list-tips/index",
+			"style": {
+				"navigationBarTitleText": "List Tips 列表提示",
+				"navigationStyle": "custom"
+			}
 		}
 	],
 	"globalStyle": {
