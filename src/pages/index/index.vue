@@ -158,6 +158,14 @@
         clickable
         @click="goArticle"
       />
+      <weui-cell
+        title="Footer 页脚"
+        label="版权、链接、固定底部"
+        value="查看"
+        arrow
+        clickable
+        @click="goFooter"
+      />
     </weui-cell-group>
   </view>
 </template>
@@ -231,6 +239,9 @@ export default {
     },
     goArticle() {
       this.go('/pages/article/index')
+    },
+    goFooter() {
+      this.go('/pages/footer/index')
     },
   },
 }

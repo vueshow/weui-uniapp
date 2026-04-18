@@ -139,6 +139,13 @@
 				"navigationBarTitleText": "Article 文章",
 				"navigationStyle": "custom"
 			}
+		},
+		{
+			"path": "pages/footer/index",
+			"style": {
+				"navigationBarTitleText": "Footer 页脚",
+				"navigationStyle": "custom"
+			}
 		}
 	],
 	"globalStyle": {
