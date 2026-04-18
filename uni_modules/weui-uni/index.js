@@ -8,6 +8,7 @@ import WeuiInput from './components/weui-input/weui-input.vue';
 import WeuiPanel from './components/weui-panel/weui-panel.vue';
 import WeuiCard from './components/weui-card/weui-card.vue';
 import WeuiToast from './components/weui-toast/weui-toast.vue';
+import WeuiDialog from './components/weui-dialog/weui-dialog.vue';
 
 const components = [
   WeuiButton,
@@ -20,6 +21,7 @@ const components = [
   WeuiPanel,
   WeuiCard,
   WeuiToast,
+  WeuiDialog,
 ];
 
 export {
@@ -33,6 +35,7 @@ export {
   WeuiPanel,
   WeuiCard,
   WeuiToast,
+  WeuiDialog,
 };
 
 export default {

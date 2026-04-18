@@ -54,6 +54,14 @@
         clickable
         @click="goToast"
       />
+      <weui-cell
+        title="Dialog 对话框"
+        label="样式一、样式二、样式三"
+        value="查看"
+        arrow
+        clickable
+        @click="goDialog"
+      />
     </weui-cell-group>
   </view>
 </template>
@@ -88,6 +96,9 @@ export default {
     },
     goToast() {
       this.go('/pages/toast/index')
+    },
+    goDialog() {
+      this.go('/pages/dialog/index')
     },
   },
 }

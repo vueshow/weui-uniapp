@@ -47,6 +47,13 @@
 				"navigationBarTitleText": "Toast 提示",
 				"navigationStyle": "custom"
 			}
+		},
+		{
+			"path": "pages/dialog/index",
+			"style": {
+				"navigationBarTitleText": "Dialog 对话框",
+				"navigationStyle": "custom"
+			}
 		}
 	],
 	"globalStyle": {
