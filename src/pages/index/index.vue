@@ -206,6 +206,14 @@
         clickable
         @click="goForm"
       />
+      <weui-cell
+        title="Toptips 顶部提示"
+        label="错误、普通、成功提示"
+        value="查看"
+        arrow
+        clickable
+        @click="goToptips"
+      />
     </weui-cell-group>
   </view>
 </template>
@@ -297,6 +305,9 @@ export default {
     },
     goForm() {
       this.go('/pages/form/index')
+    },
+    goToptips() {
+      this.go('/pages/toptips/index')
     },
   },
 }

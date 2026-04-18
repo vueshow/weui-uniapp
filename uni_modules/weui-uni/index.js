@@ -30,6 +30,7 @@ import WeuiMsg from './components/weui-msg/weui-msg.vue';
 import WeuiSearchbar from './components/weui-searchbar/weui-searchbar.vue';
 import WeuiForm from './components/weui-form/weui-form.vue';
 import WeuiFormPreview from './components/weui-form-preview/weui-form-preview.vue';
+import WeuiToptips from './components/weui-toptips/weui-toptips.vue';
 
 const components = [
   WeuiButton,
@@ -64,6 +65,7 @@ const components = [
   WeuiSearchbar,
   WeuiForm,
   WeuiFormPreview,
+  WeuiToptips,
 ];
 
 export {
@@ -99,6 +101,7 @@ export {
   WeuiSearchbar,
   WeuiForm,
   WeuiFormPreview,
+  WeuiToptips,
 };
 
 export default {

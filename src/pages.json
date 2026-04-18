@@ -181,6 +181,13 @@
 				"navigationBarTitleText": "Form 表单",
 				"navigationStyle": "custom"
 			}
+		},
+		{
+			"path": "pages/toptips/index",
+			"style": {
+				"navigationBarTitleText": "Toptips 顶部提示",
+				"navigationStyle": "custom"
+			}
 		}
 	],
 	"globalStyle": {
