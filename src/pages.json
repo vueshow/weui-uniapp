@@ -111,6 +111,13 @@
 				"navigationBarTitleText": "Progress 进度条",
 				"navigationStyle": "custom"
 			}
+		},
+		{
+			"path": "pages/tabbar/index",
+			"style": {
+				"navigationBarTitleText": "Tabbar 底部导航",
+				"navigationStyle": "custom"
+			}
 		}
 	],
 	"globalStyle": {

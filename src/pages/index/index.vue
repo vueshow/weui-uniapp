@@ -126,6 +126,14 @@
         clickable
         @click="goProgress"
       />
+      <weui-cell
+        title="Tabbar 底部导航"
+        label="选项、徽标、红点"
+        value="查看"
+        arrow
+        clickable
+        @click="goTabbar"
+      />
     </weui-cell-group>
   </view>
 </template>
@@ -187,6 +195,9 @@ export default {
     },
     goProgress() {
       this.go('/pages/progress/index')
+    },
+    goTabbar() {
+      this.go('/pages/tabbar/index')
     },
   },
 }

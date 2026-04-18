@@ -17,6 +17,7 @@ import WeuiSlider from './components/weui-slider/weui-slider.vue';
 import WeuiUploader from './components/weui-uploader/weui-uploader.vue';
 import WeuiGallery from './components/weui-gallery/weui-gallery.vue';
 import WeuiProgress from './components/weui-progress/weui-progress.vue';
+import WeuiTabbar from './components/weui-tabbar/weui-tabbar.vue';
 
 const components = [
   WeuiButton,
@@ -38,6 +39,7 @@ const components = [
   WeuiUploader,
   WeuiGallery,
   WeuiProgress,
+  WeuiTabbar,
 ];
 
 export {
@@ -60,6 +62,7 @@ export {
   WeuiUploader,
   WeuiGallery,
   WeuiProgress,
+  WeuiTabbar,
 };
 
 export default {
