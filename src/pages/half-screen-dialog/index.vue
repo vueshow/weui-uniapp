@@ -87,16 +87,12 @@
       </template>
       <view class="weui-form__tips__group">
         <view class="weui-form__tips__wrp">
-          <label class="weui-agree weui-wa-hotarea">
-            <text class="weui-agree__checkbox" />
-            <text class="weui-agree__text">阅读并同意<text class="weui-link">《相关条款》</text></text>
-          </label>
+          <weui-agree v-model="agreeTerms">
+            阅读并同意<text class="weui-link">《相关条款》</text>
+          </weui-agree>
         </view>
         <view class="weui-form__tips__wrp">
-          <label class="weui-agree weui-wa-hotarea">
-            <text class="weui-agree__checkbox" />
-            <text class="weui-agree__text">以上信息用于核对账号绑定的身份</text>
-          </label>
+          <weui-agree v-model="agreeIdentity" text="以上信息用于核对账号绑定的身份" />
         </view>
       </view>
     </weui-half-screen-dialog>
@@ -130,6 +126,8 @@ export default {
       dialog3: false,
       dialog4: false,
       dialog5: false,
+      agreeTerms: false,
+      agreeIdentity: false,
       mainActions: [
         { text: '次要操作', type: 'default' },
         { text: '主要操作', type: 'primary' },

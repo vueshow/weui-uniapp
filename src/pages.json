@@ -216,6 +216,13 @@
 				"navigationBarTitleText": "Half-screen Dialog 半屏组件",
 				"navigationStyle": "custom"
 			}
+		},
+		{
+			"path": "pages/agree/index",
+			"style": {
+				"navigationBarTitleText": "Agree 协议勾选",
+				"navigationStyle": "custom"
+			}
 		}
 	],
 	"globalStyle": {

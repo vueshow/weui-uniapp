@@ -246,6 +246,14 @@
         clickable
         @click="goHalfScreenDialog"
       />
+      <weui-cell
+        title="Agree 协议勾选"
+        label="协议、警告、禁用状态"
+        value="查看"
+        arrow
+        clickable
+        @click="goAgree"
+      />
     </weui-cell-group>
   </view>
 </template>
@@ -352,6 +360,9 @@ export default {
     },
     goHalfScreenDialog() {
       this.go('/pages/half-screen-dialog/index')
+    },
+    goAgree() {
+      this.go('/pages/agree/index')
     },
   },
 }
