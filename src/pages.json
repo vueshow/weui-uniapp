@@ -209,6 +209,13 @@
 				"navigationBarTitleText": "Icons 图标",
 				"navigationStyle": "custom"
 			}
+		},
+		{
+			"path": "pages/half-screen-dialog/index",
+			"style": {
+				"navigationBarTitleText": "Half-screen Dialog 半屏组件",
+				"navigationStyle": "custom"
+			}
 		}
 	],
 	"globalStyle": {

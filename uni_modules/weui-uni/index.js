@@ -31,6 +31,7 @@ import WeuiSearchbar from './components/weui-searchbar/weui-searchbar.vue';
 import WeuiForm from './components/weui-form/weui-form.vue';
 import WeuiFormPreview from './components/weui-form-preview/weui-form-preview.vue';
 import WeuiToptips from './components/weui-toptips/weui-toptips.vue';
+import WeuiHalfScreenDialog from './components/weui-half-screen-dialog/weui-half-screen-dialog.vue';
 
 const components = [
   WeuiButton,
@@ -66,6 +67,7 @@ const components = [
   WeuiForm,
   WeuiFormPreview,
   WeuiToptips,
+  WeuiHalfScreenDialog,
 ];
 
 export {
@@ -102,6 +104,7 @@ export {
   WeuiForm,
   WeuiFormPreview,
   WeuiToptips,
+  WeuiHalfScreenDialog,
 };
 
 export default {

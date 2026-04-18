@@ -238,6 +238,14 @@
         clickable
         @click="goIcons"
       />
+      <weui-cell
+        title="Half-screen Dialog 半屏组件"
+        label="半屏弹层、底部操作、抓手"
+        value="查看"
+        arrow
+        clickable
+        @click="goHalfScreenDialog"
+      />
     </weui-cell-group>
   </view>
 </template>
@@ -341,6 +349,9 @@ export default {
     },
     goIcons() {
       this.go('/pages/icons/index')
+    },
+    goHalfScreenDialog() {
+      this.go('/pages/half-screen-dialog/index')
     },
   },
 }
