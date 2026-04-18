@@ -153,6 +153,13 @@
 				"navigationBarTitleText": "Flex 布局",
 				"navigationStyle": "custom"
 			}
+		},
+		{
+			"path": "pages/actionsheet/index",
+			"style": {
+				"navigationBarTitleText": "ActionSheet 弹出菜单",
+				"navigationStyle": "custom"
+			}
 		}
 	],
 	"globalStyle": {

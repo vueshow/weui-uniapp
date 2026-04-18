@@ -174,6 +174,14 @@
         clickable
         @click="goFlex"
       />
+      <weui-cell
+        title="ActionSheet 弹出菜单"
+        label="iOS、Android 样式"
+        value="查看"
+        arrow
+        clickable
+        @click="goActionsheet"
+      />
     </weui-cell-group>
   </view>
 </template>
@@ -253,6 +261,9 @@ export default {
     },
     goFlex() {
       this.go('/pages/flex/index')
+    },
+    goActionsheet() {
+      this.go('/pages/actionsheet/index')
     },
   },
 }

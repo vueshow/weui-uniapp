@@ -25,6 +25,7 @@ import WeuiArticle from './components/weui-article/weui-article.vue';
 import WeuiFooter from './components/weui-footer/weui-footer.vue';
 import WeuiFlex from './components/weui-flex/weui-flex.vue';
 import WeuiFlexItem from './components/weui-flex-item/weui-flex-item.vue';
+import WeuiActionsheet from './components/weui-actionsheet/weui-actionsheet.vue';
 
 const components = [
   WeuiButton,
@@ -54,6 +55,7 @@ const components = [
   WeuiFooter,
   WeuiFlex,
   WeuiFlexItem,
+  WeuiActionsheet,
 ];
 
 export {
@@ -84,6 +86,7 @@ export {
   WeuiFooter,
   WeuiFlex,
   WeuiFlexItem,
+  WeuiActionsheet,
 };
 
 export default {
