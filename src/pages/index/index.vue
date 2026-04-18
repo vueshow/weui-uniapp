@@ -62,6 +62,14 @@
         clickable
         @click="goDialog"
       />
+      <weui-cell
+        title="Picker 选择器"
+        label="单列、多列、日期、时间"
+        value="查看"
+        arrow
+        clickable
+        @click="goPicker"
+      />
     </weui-cell-group>
   </view>
 </template>
@@ -99,6 +107,9 @@ export default {
     },
     goDialog() {
       this.go('/pages/dialog/index')
+    },
+    goPicker() {
+      this.go('/pages/picker/index')
     },
   },
 }

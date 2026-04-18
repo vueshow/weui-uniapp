@@ -3,7 +3,8 @@
 		{
 			"path": "pages/index/index",
 			"style": {
-				"navigationBarTitleText": "WeUI UniApp"
+				"navigationBarTitleText": "WeUI UniApp",
+				"navigationStyle": "custom"
 			}
 		},
 		{
@@ -52,6 +53,13 @@
 			"path": "pages/dialog/index",
 			"style": {
 				"navigationBarTitleText": "Dialog 对话框",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/picker/index",
+			"style": {
+				"navigationBarTitleText": "Picker 选择器",
 				"navigationStyle": "custom"
 			}
 		}
