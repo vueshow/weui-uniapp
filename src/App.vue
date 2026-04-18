@@ -13,5 +13,5 @@ export default {
 </script>
 
 <style>
-@import '../uni_modules/weui-uni/styles/index.scss';
+@import './styles/weui.css';
 </style>

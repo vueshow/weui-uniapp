@@ -12,6 +12,13 @@
 				"navigationBarTitleText": "Button 按钮",
 				"navigationStyle": "custom"
 			}
+		},
+		{
+			"path": "pages/loading/index",
+			"style": {
+				"navigationBarTitleText": "Loading 正在加载",
+				"navigationStyle": "custom"
+			}
 		}
 	],
 	"globalStyle": {

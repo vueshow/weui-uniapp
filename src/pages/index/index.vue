@@ -14,6 +14,14 @@
         clickable
         @click="goButton"
       />
+      <weui-cell
+        title="Loading 加载"
+        label="loading、mask loading、品牌色"
+        value="查看"
+        arrow
+        clickable
+        @click="goLoading"
+      />
     </weui-cells>
   </view>
 </template>
@@ -21,10 +29,21 @@
 <script>
 export default {
   methods: {
-    goButton() {
+    go(url) {
       uni.navigateTo({
-        url: '/pages/button/index',
+        url,
+        fail: () => {
+          if (typeof window !== 'undefined') {
+            window.location.hash = `#${url}`
+          }
+        },
       })
+    },
+    goButton() {
+      this.go('/pages/button/index')
+    },
+    goLoading() {
+      this.go('/pages/loading/index')
     },
   },
 }
