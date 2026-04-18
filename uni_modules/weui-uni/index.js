@@ -5,6 +5,9 @@ import WeuiBadge from './components/weui-badge/weui-badge.vue';
 import WeuiLoadmore from './components/weui-loadmore/weui-loadmore.vue';
 import WeuiLoading from './components/weui-loading/weui-loading.vue';
 import WeuiInput from './components/weui-input/weui-input.vue';
+import WeuiPanel from './components/weui-panel/weui-panel.vue';
+import WeuiCard from './components/weui-card/weui-card.vue';
+import WeuiToast from './components/weui-toast/weui-toast.vue';
 
 const components = [
   WeuiButton,
@@ -14,6 +17,9 @@ const components = [
   WeuiLoadmore,
   WeuiLoading,
   WeuiInput,
+  WeuiPanel,
+  WeuiCard,
+  WeuiToast,
 ];
 
 export {
@@ -24,6 +30,9 @@ export {
   WeuiLoadmore,
   WeuiLoading,
   WeuiInput,
+  WeuiPanel,
+  WeuiCard,
+  WeuiToast,
 };
 
 export default {

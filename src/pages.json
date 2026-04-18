@@ -33,6 +33,20 @@
 				"navigationBarTitleText": "Input 输入框",
 				"navigationStyle": "custom"
 			}
+		},
+		{
+			"path": "pages/list/index",
+			"style": {
+				"navigationBarTitleText": "List 列表",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/toast/index",
+			"style": {
+				"navigationBarTitleText": "Toast 提示",
+				"navigationStyle": "custom"
+			}
 		}
 	],
 	"globalStyle": {

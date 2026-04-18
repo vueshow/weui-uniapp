@@ -38,6 +38,22 @@
         clickable
         @click="goInput"
       />
+      <weui-cell
+        title="List 列表"
+        label="文字组合、图文组合"
+        value="查看"
+        arrow
+        clickable
+        @click="goList"
+      />
+      <weui-cell
+        title="Toast 提示"
+        label="成功、失败、加载、文字提示"
+        value="查看"
+        arrow
+        clickable
+        @click="goToast"
+      />
     </weui-cell-group>
   </view>
 </template>
@@ -66,6 +82,12 @@ export default {
     },
     goInput() {
       this.go('/pages/input/index')
+    },
+    goList() {
+      this.go('/pages/list/index')
+    },
+    goToast() {
+      this.go('/pages/toast/index')
     },
   },
 }
