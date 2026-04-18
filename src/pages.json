@@ -19,6 +19,13 @@
 				"navigationBarTitleText": "Loading 正在加载",
 				"navigationStyle": "custom"
 			}
+		},
+		{
+			"path": "pages/cell/index",
+			"style": {
+				"navigationBarTitleText": "Cell 列表项",
+				"navigationStyle": "custom"
+			}
 		}
 	],
 	"globalStyle": {

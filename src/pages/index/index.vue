@@ -22,6 +22,14 @@
         clickable
         @click="goLoading"
       />
+      <weui-cell
+        title="Cell 列表项"
+        label="普通、带图标、带跳转"
+        value="查看"
+        arrow
+        clickable
+        @click="goCell"
+      />
     </weui-cells>
   </view>
 </template>
@@ -44,6 +52,9 @@ export default {
     },
     goLoading() {
       this.go('/pages/loading/index')
+    },
+    goCell() {
+      this.go('/pages/cell/index')
     },
   },
 }
