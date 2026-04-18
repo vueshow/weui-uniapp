@@ -27,6 +27,7 @@ export default {
     variant: {
       type: String,
       default: '',
+      validator: (value) => ['', 'form', 'checkbox', 'radio'].includes(value),
     },
   },
   computed: {

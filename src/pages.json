@@ -69,6 +69,13 @@
 				"navigationBarTitleText": "Switch 开关",
 				"navigationStyle": "custom"
 			}
+		},
+		{
+			"path": "pages/checkbox/index",
+			"style": {
+				"navigationBarTitleText": "Checkbox 复选框",
+				"navigationStyle": "custom"
+			}
 		}
 	],
 	"globalStyle": {

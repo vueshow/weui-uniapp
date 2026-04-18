@@ -78,6 +78,14 @@
         clickable
         @click="goSwitch"
       />
+      <weui-cell
+        title="Checkbox 复选框"
+        label="复选列表项、禁用状态"
+        value="查看"
+        arrow
+        clickable
+        @click="goCheckbox"
+      />
     </weui-cell-group>
   </view>
 </template>
@@ -121,6 +129,9 @@ export default {
     },
     goSwitch() {
       this.go('/pages/switch/index')
+    },
+    goCheckbox() {
+      this.go('/pages/checkbox/index')
     },
   },
 }

@@ -11,6 +11,7 @@ import WeuiToast from './components/weui-toast/weui-toast.vue';
 import WeuiDialog from './components/weui-dialog/weui-dialog.vue';
 import WeuiPicker from './components/weui-picker/weui-picker.vue';
 import WeuiSwitch from './components/weui-switch/weui-switch.vue';
+import WeuiCheckbox from './components/weui-checkbox/weui-checkbox.vue';
 
 const components = [
   WeuiButton,
@@ -26,6 +27,7 @@ const components = [
   WeuiDialog,
   WeuiPicker,
   WeuiSwitch,
+  WeuiCheckbox,
 ];
 
 export {
@@ -42,6 +44,7 @@ export {
   WeuiDialog,
   WeuiPicker,
   WeuiSwitch,
+  WeuiCheckbox,
 };
 
 export default {
