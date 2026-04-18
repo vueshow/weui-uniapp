@@ -142,6 +142,14 @@
         clickable
         @click="goNavbar"
       />
+      <weui-cell
+        title="Grid 九宫格"
+        label="宫格入口"
+        value="查看"
+        arrow
+        clickable
+        @click="goGrid"
+      />
     </weui-cell-group>
   </view>
 </template>
@@ -209,6 +217,9 @@ export default {
     },
     goNavbar() {
       this.go('/pages/navbar/index')
+    },
+    goGrid() {
+      this.go('/pages/grid/index')
     },
   },
 }

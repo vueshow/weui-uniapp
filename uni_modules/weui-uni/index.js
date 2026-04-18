@@ -19,6 +19,8 @@ import WeuiGallery from './components/weui-gallery/weui-gallery.vue';
 import WeuiProgress from './components/weui-progress/weui-progress.vue';
 import WeuiTabbar from './components/weui-tabbar/weui-tabbar.vue';
 import WeuiNavbar from './components/weui-navbar/weui-navbar.vue';
+import WeuiGrid from './components/weui-grid/weui-grid.vue';
+import WeuiGridItem from './components/weui-grid-item/weui-grid-item.vue';
 
 const components = [
   WeuiButton,
@@ -42,6 +44,8 @@ const components = [
   WeuiProgress,
   WeuiTabbar,
   WeuiNavbar,
+  WeuiGrid,
+  WeuiGridItem,
 ];
 
 export {
@@ -66,6 +70,8 @@ export {
   WeuiProgress,
   WeuiTabbar,
   WeuiNavbar,
+  WeuiGrid,
+  WeuiGridItem,
 };
 
 export default {

@@ -125,6 +125,13 @@
 				"navigationBarTitleText": "Navbar 顶部导航",
 				"navigationStyle": "custom"
 			}
+		},
+		{
+			"path": "pages/grid/index",
+			"style": {
+				"navigationBarTitleText": "Grid 九宫格",
+				"navigationStyle": "custom"
+			}
 		}
 	],
 	"globalStyle": {
