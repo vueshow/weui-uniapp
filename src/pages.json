@@ -76,6 +76,13 @@
 				"navigationBarTitleText": "Checkbox 复选框",
 				"navigationStyle": "custom"
 			}
+		},
+		{
+			"path": "pages/radio/index",
+			"style": {
+				"navigationBarTitleText": "Radio 单选框",
+				"navigationStyle": "custom"
+			}
 		}
 	],
 	"globalStyle": {

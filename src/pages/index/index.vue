@@ -86,6 +86,14 @@
         clickable
         @click="goCheckbox"
       />
+      <weui-cell
+        title="Radio 单选框"
+        label="单选列表项、禁用状态"
+        value="查看"
+        arrow
+        clickable
+        @click="goRadio"
+      />
     </weui-cell-group>
   </view>
 </template>
@@ -132,6 +140,9 @@ export default {
     },
     goCheckbox() {
       this.go('/pages/checkbox/index')
+    },
+    goRadio() {
+      this.go('/pages/radio/index')
     },
   },
 }
