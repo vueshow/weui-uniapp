@@ -278,6 +278,14 @@
         clickable
         @click="goListTips"
       />
+      <weui-cell
+        title="Steps 步骤条"
+        label="垂直型、水平型"
+        value="查看"
+        arrow
+        clickable
+        @click="goSteps"
+      />
     </weui-cell-group>
   </view>
 </template>
@@ -396,6 +404,9 @@ export default {
     },
     goListTips() {
       this.go('/pages/list-tips/index')
+    },
+    goSteps() {
+      this.go('/pages/steps/index')
     },
   },
 }

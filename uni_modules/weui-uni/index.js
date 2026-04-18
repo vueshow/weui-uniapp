@@ -35,6 +35,7 @@ import WeuiHalfScreenDialog from './components/weui-half-screen-dialog/weui-half
 import WeuiAgree from './components/weui-agree/weui-agree.vue';
 import WeuiInformationBar from './components/weui-information-bar/weui-information-bar.vue';
 import WeuiListTips from './components/weui-list-tips/weui-list-tips.vue';
+import WeuiSteps from './components/weui-steps/weui-steps.vue';
 
 const components = [
   WeuiButton,
@@ -74,6 +75,7 @@ const components = [
   WeuiAgree,
   WeuiInformationBar,
   WeuiListTips,
+  WeuiSteps,
 ];
 
 export {
@@ -114,6 +116,7 @@ export {
   WeuiAgree,
   WeuiInformationBar,
   WeuiListTips,
+  WeuiSteps,
 };
 
 export default {
