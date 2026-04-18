@@ -43,6 +43,13 @@
 			}
 		},
 		{
+			"path": "pages/panel/index",
+			"style": {
+				"navigationBarTitleText": "Panel 面板",
+				"navigationStyle": "custom"
+			}
+		},
+		{
 			"path": "pages/toast/index",
 			"style": {
 				"navigationBarTitleText": "Toast 提示",

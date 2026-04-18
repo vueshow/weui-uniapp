@@ -1,9 +1,14 @@
 <template>
-  <view class="weui-panel">
+  <view class="weui-panel" :class="{ 'weui-panel_access': access }">
     <view v-if="title || $slots.header" class="weui-panel__hd">
       <slot name="header">{{ title }}</slot>
     </view>
-    <slot />
+    <view v-if="$slots.default" class="weui-panel__bd">
+      <slot />
+    </view>
+    <view v-if="$slots.footer" class="weui-panel__ft">
+      <slot name="footer" />
+    </view>
   </view>
 </template>
 
@@ -11,6 +16,10 @@
 export default {
   name: 'WeuiPanel',
   props: {
+    access: {
+      type: Boolean,
+      default: false,
+    },
     title: {
       type: String,
       default: '',

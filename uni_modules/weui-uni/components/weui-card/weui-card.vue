@@ -70,6 +70,7 @@ export default {
     cardClass() {
       return {
         'weui-media-box_appmsg': this.isAppmsg,
+        'weui-media-box_text': !this.isAppmsg,
       };
     },
     metaList() {

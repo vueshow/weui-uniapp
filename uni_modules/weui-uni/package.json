@@ -1,21 +1,51 @@
 {
+  "name": "weui-uniapp",
   "id": "weui-uni",
-  "displayName": "WeUI Uni",
-  "version": "0.1.0",
-  "description": "A uni-app component library wrapped from WeUI styles.",
+  "displayName": "WeUI UniApp",
+  "version": "1.0.6",
+  "description": "WeUI components for uni-app Vue 3.",
+  "main": "index.js",
+  "module": "index.js",
+  "types": "index.d.ts",
+  "type": "module",
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "components",
+    "styles",
+    "examples",
+    "README.md",
+    "package.json"
+  ],
   "keywords": [
     "weui",
     "uni-app",
+    "uniapp",
     "vue3",
     "wechat",
-    "ui"
+    "ui",
+    "components"
   ],
-  "repository": "https://github.com/weui/weui",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/weui/weui.git"
+  },
+  "homepage": "https://github.com/weui/weui",
+  "bugs": {
+    "url": "https://github.com/weui/weui/issues"
+  },
   "license": "MIT",
+  "peerDependencies": {
+    "@dcloudio/uni-app": ">=3.0.0",
+    "vue": ">=3.4.0"
+  },
   "dcloudext": {
     "category": [
       "前端组件",
       "通用组件"
     ]
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }

@@ -11,7 +11,7 @@
         :key="item.title"
         class="icon-box"
       >
-        <view role="img" :aria-label="item.title" :class="item.className" />
+        <weui-icon :type="item.type" :size="item.size" :label="item.title" />
         <view class="icon-box__ctn">
           <view class="icon-box__title">{{ item.title }}</view>
           <view class="icon-box__desc">{{ item.desc }}</view>
@@ -22,34 +22,44 @@
 </template>
 
 <script>
+import WeuiIcon from '../../../uni_modules/weui-uni/components/weui-icon/weui-icon.vue';
+
 export default {
+  components: {
+    WeuiIcon,
+  },
   data() {
     return {
       messageIcons: [
         {
           title: '成功',
           desc: '用于表示操作顺利达成',
-          className: 'weui-icon-success weui-icon_msg',
+          type: 'success',
+          size: 'msg',
         },
         {
           title: '提示',
           desc: '用于表示信息提示，也常用于操作拦截提示用户所需信息',
-          className: 'weui-icon-info weui-icon_msg',
+          type: 'info',
+          size: 'msg',
         },
         {
           title: '普通警告',
           desc: '用于表示操作后将引起一定后果的情况',
-          className: 'weui-icon-warn weui-icon_msg-primary',
+          type: 'warn',
+          size: 'msg-primary',
         },
         {
           title: '强烈警告',
           desc: '用于表示操作后将引起严重不可挽回后果的情况',
-          className: 'weui-icon-warn weui-icon_msg',
+          type: 'warn',
+          size: 'msg',
         },
         {
           title: '等待',
           desc: '用于表示等待',
-          className: 'weui-icon-waiting weui-icon_msg',
+          type: 'waiting',
+          size: 'msg',
         },
       ],
     };

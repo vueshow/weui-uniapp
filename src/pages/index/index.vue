@@ -81,7 +81,7 @@ export default {
             { name: 'Icons', path: '/pages/icons/index' },
             { name: 'Loading', path: '/pages/loading/index' },
             { name: 'Loadmore', path: '/pages/loadmore/index' },
-            { name: 'Panel', path: '/pages/list/index' },
+            { name: 'Panel', path: '/pages/panel/index' },
             { name: 'Preview', path: '/pages/form-preview/index' },
             { name: 'Progress', path: '/pages/progress/index' },
             { name: 'Steps', path: '/pages/steps/index' },

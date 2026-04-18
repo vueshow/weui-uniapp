@@ -33,7 +33,13 @@
     "build:mp-xhs": "uni build -p mp-xhs",
     "build:quickapp-webview": "uni build -p quickapp-webview",
     "build:quickapp-webview-huawei": "uni build -p quickapp-webview-huawei",
-    "build:quickapp-webview-union": "uni build -p quickapp-webview-union"
+    "build:quickapp-webview-union": "uni build -p quickapp-webview-union",
+    "lib:login": "npm login",
+    "lib:whoami": "npm whoami",
+    "lib:pack": "mkdir -p dist && pnpm --dir uni_modules/weui-uni pack --pack-destination ../../dist",
+    "lib:check": "pnpm build:h5 && pnpm lib:pack",
+    "lib:publish": "pnpm build:h5 && cd uni_modules/weui-uni && npm publish --access public",
+    "lib:publish:no-git-checks": "pnpm lib:publish"
   },
   "dependencies": {
     "@dcloudio/uni-app": "3.0.0-5000720260410001",

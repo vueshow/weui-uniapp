@@ -21,6 +21,7 @@ import WeuiTabbar from './components/weui-tabbar/weui-tabbar.vue';
 import WeuiNavbar from './components/weui-navbar/weui-navbar.vue';
 import WeuiGrid from './components/weui-grid/weui-grid.vue';
 import WeuiGridItem from './components/weui-grid-item/weui-grid-item.vue';
+import WeuiIcon from './components/weui-icon/weui-icon.vue';
 import WeuiArticle from './components/weui-article/weui-article.vue';
 import WeuiFooter from './components/weui-footer/weui-footer.vue';
 import WeuiFlex from './components/weui-flex/weui-flex.vue';
@@ -62,6 +63,7 @@ const components = [
   WeuiNavbar,
   WeuiGrid,
   WeuiGridItem,
+  WeuiIcon,
   WeuiArticle,
   WeuiFooter,
   WeuiFlex,
@@ -104,6 +106,7 @@ export {
   WeuiNavbar,
   WeuiGrid,
   WeuiGridItem,
+  WeuiIcon,
   WeuiArticle,
   WeuiFooter,
   WeuiFlex,
