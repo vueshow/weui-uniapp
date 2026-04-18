@@ -104,6 +104,13 @@
 				"navigationBarTitleText": "Gallery 画廊",
 				"navigationStyle": "custom"
 			}
+		},
+		{
+			"path": "pages/progress/index",
+			"style": {
+				"navigationBarTitleText": "Progress 进度条",
+				"navigationStyle": "custom"
+			}
 		}
 	],
 	"globalStyle": {

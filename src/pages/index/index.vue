@@ -118,6 +118,14 @@
         clickable
         @click="goGallery"
       />
+      <weui-cell
+        title="Progress 进度条"
+        label="进度展示、取消操作"
+        value="查看"
+        arrow
+        clickable
+        @click="goProgress"
+      />
     </weui-cell-group>
   </view>
 </template>
@@ -176,6 +184,9 @@ export default {
     },
     goGallery() {
       this.go('/pages/gallery/index')
+    },
+    goProgress() {
+      this.go('/pages/progress/index')
     },
   },
 }
