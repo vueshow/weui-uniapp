@@ -1,7 +1,16 @@
 <template>
-  <view class="weui-uni-loadmore" :class="{ 'weui-uni-loadmore_line': line }">
-    <view v-if="loading" class="weui-uni-loadmore__loading" />
-    <text class="weui-uni-loadmore__tips">{{ resolvedText }}</text>
+  <view
+    :role="loading ? 'alert' : 'status'"
+    class="weui-loadmore"
+    :class="loadmoreClass"
+  >
+    <template v-if="loading">
+      <view aria-hidden="true" role="img" aria-label="正在加载" class="weui-primary-loading">
+        <view class="weui-primary-loading__dot" />
+      </view>
+    </template>
+    <view v-if="dot" class="weui-hidden_abs">{{ resolvedText }}</view>
+    <text class="weui-loadmore__tips">{{ dot ? '' : resolvedText }}</text>
   </view>
 </template>
 
@@ -14,6 +23,10 @@ export default {
       default: true,
     },
     line: {
+      type: Boolean,
+      default: false,
+    },
+    dot: {
       type: Boolean,
       default: false,
     },
@@ -31,6 +44,12 @@ export default {
     },
   },
   computed: {
+    loadmoreClass() {
+      return {
+        'weui-loadmore_line': this.line || this.dot || this.empty || this.noMore,
+        'weui-loadmore_dot': this.dot,
+      };
+    },
     resolvedText() {
       if (this.text) {
         return this.text;
@@ -46,43 +65,3 @@ export default {
   },
 };
 </script>
-
-<style lang="scss" scoped>
-@import '../../styles/theme.scss';
-
-.weui-uni-loadmore {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 65%;
-  margin: 24px auto;
-  color: var(--weui-FG-1, #{$weui-fg-1});
-  font-size: 14px;
-}
-
-.weui-uni-loadmore_line {
-  @include weui-hairline(top);
-
-  padding-top: 16px;
-}
-
-.weui-uni-loadmore__loading {
-  width: 18px;
-  height: 18px;
-  margin-right: 8px;
-  border: 2px solid var(--weui-FG-2, #{$weui-fg-2});
-  border-top-color: transparent;
-  border-radius: 50%;
-  animation: weui-uni-spin 0.9s linear infinite;
-}
-
-.weui-uni-loadmore__tips {
-  color: var(--weui-FG-1, #{$weui-fg-1});
-}
-
-@keyframes weui-uni-spin {
-  to {
-    transform: rotate(360deg);
-  }
-}
-</style>

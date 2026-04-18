@@ -222,6 +222,14 @@
         clickable
         @click="goBadge"
       />
+      <weui-cell
+        title="Loadmore 加载更多"
+        label="加载中、暂无数据、分割线"
+        value="查看"
+        arrow
+        clickable
+        @click="goLoadmore"
+      />
     </weui-cell-group>
   </view>
 </template>
@@ -319,6 +327,9 @@ export default {
     },
     goBadge() {
       this.go('/pages/badge/index')
+    },
+    goLoadmore() {
+      this.go('/pages/loadmore/index')
     },
   },
 }

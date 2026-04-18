@@ -195,6 +195,13 @@
 				"navigationBarTitleText": "Badge 徽章",
 				"navigationStyle": "custom"
 			}
+		},
+		{
+			"path": "pages/loadmore/index",
+			"style": {
+				"navigationBarTitleText": "Loadmore 加载更多",
+				"navigationStyle": "custom"
+			}
 		}
 	],
 	"globalStyle": {
