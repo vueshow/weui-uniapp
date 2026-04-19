@@ -38,7 +38,7 @@
     "docs:build": "vitepress build docs",
     "docs:preview": "vitepress preview docs",
     "site:dev": "concurrently -n demo,docs -c green,blue \"pnpm dev:h5\" \"pnpm docs:dev\"",
-    "site:build": "pnpm build:h5 && VITEPRESS_BASE=/weui-uniapp/ pnpm docs:build && mkdir -p docs/.vitepress/dist/demo && cp -R dist/build/h5/. docs/.vitepress/dist/demo",
+    "site:build": "UNI_BASE=/weui-uniapp/demo/ pnpm build:h5 && VITEPRESS_BASE=/weui-uniapp/ pnpm docs:build && mkdir -p docs/.vitepress/dist/demo && cp -R dist/build/h5/. docs/.vitepress/dist/demo",
     "lib:login": "npm login",
     "lib:whoami": "npm whoami",
     "lib:pack": "mkdir -p dist && pnpm --dir uni_modules/weui-uni pack --pack-destination ../../dist",
