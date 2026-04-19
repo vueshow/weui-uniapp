@@ -2,43 +2,40 @@
   <view class="page weui-uni-page">
     <view class="page__hd">
       <view class="page__title">Picker</view>
-      <view class="page__desc">选择器</view>
+      <view class="page__desc">多列选择器，需要配合js实现</view>
     </view>
-    <view class="page__bd">
-      <weui-cell-group title="基础选择器" variant="form">
-        <weui-picker
-          v-model="ticketIndex"
-          label="单列选择器"
-          :range="ticketRange"
-          @change="handleTicketChange"
-        />
-        <weui-picker
-          v-model="multiValue"
-          mode="multiSelector"
-          label="多列选择器"
-          :range="multiRange"
-          separator=" - "
-          @change="handleMultiChange"
-        />
-      </weui-cell-group>
+    <view class="page__bd page__bd_spacing">
+      <weui-button
+        type="default"
+        text="单列选择器"
+        @click="showPicker = true"
+      />
+      <weui-button
+        type="default"
+        text="日期选择器"
+        @click="showDatePicker = true"
+      />
+    </view>
 
-      <weui-cell-group title="日期时间" variant="form">
-        <weui-picker
-          v-model="dateValue"
-          mode="date"
-          label="日期选择器"
-          start="1990-01-01"
-          :end="today"
-          @change="handleDateChange"
-        />
-        <weui-picker
-          v-model="timeValue"
-          mode="time"
-          label="时间选择器"
-          @change="handleTimeChange"
-        />
-      </weui-cell-group>
-    </view>
+    <weui-picker
+      v-model="ticketIndex"
+      v-model:visible="showPicker"
+      title="单列选择器"
+      :range="ticketRange"
+      :show-close="false"
+      @confirm="handleConfirm"
+      @change="handleChange"
+    />
+    <weui-picker
+      v-model="dateValue"
+      v-model:visible="showDatePicker"
+      mode="date"
+      title="多列选择器"
+      start="1990"
+      :end="currentYear"
+      @confirm="handleDateConfirm"
+      @change="handleChange"
+    />
   </view>
 </template>
 
@@ -46,51 +43,33 @@
 export default {
   data() {
     return {
-      ticketRange: ['飞机票', '火车票', '的士票', '其他'],
+      showPicker: false,
+      showDatePicker: false,
       ticketIndex: 0,
-      multiRange: [
-        ['中国', '美国', '日本'],
-        ['北京', '上海', '深圳'],
+      dateValue: '2011-01-12',
+      ticketRange: [
+        { label: '飞机票', value: 0 },
+        { label: '火车票', value: 1 },
+        { label: '的士票', value: 2 },
+        { label: '公交票 (disabled)', value: 3, disabled: true },
+        { label: '其他', value: 4 },
       ],
-      multiValue: [0, 0],
-      dateValue: '',
-      timeValue: '',
     };
   },
   computed: {
-    today() {
-      const now = new Date();
-      const year = now.getFullYear();
-      const month = `${now.getMonth() + 1}`.padStart(2, '0');
-      const day = `${now.getDate()}`.padStart(2, '0');
-      return `${year}-${month}-${day}`;
+    currentYear() {
+      return new Date().getFullYear();
     },
   },
   methods: {
-    showToast(type, value) {
-      uni.showToast({
-        title: `${type}: ${value}`,
-        icon: 'none',
-      });
+    handleChange(result) {
+      console.log(result);
     },
-    handleTicketChange(event) {
-      const index = Number(event?.detail?.value ?? 0);
-      const text = this.ticketRange[index] || '';
-      this.showToast('单列选择器', text);
+    handleConfirm(result) {
+      console.log(result);
     },
-    handleMultiChange(event) {
-      const values = event?.detail?.value || [];
-      const first = Number(values[0] || 0);
-      const second = Number(values[1] || 0);
-      const country = this.multiRange[0]?.[first] || '';
-      const city = this.multiRange[1]?.[second] || '';
-      this.showToast('多列选择器', `${country} - ${city}`);
-    },
-    handleDateChange(event) {
-      this.showToast('日期选择器', event?.detail?.value || '');
-    },
-    handleTimeChange(event) {
-      this.showToast('时间选择器', event?.detail?.value || '');
+    handleDateConfirm(result) {
+      console.log(result);
     },
   },
 };
@@ -117,5 +96,17 @@ export default {
   color: var(--weui-FG-1);
   text-align: left;
   font-size: 14px;
+}
+
+.page__bd_spacing {
+  padding: 0 16px;
+}
+
+.page__bd_spacing .weui-btn {
+  margin-top: 16px;
+}
+
+.page__bd_spacing .weui-btn:first-child {
+  margin-top: 0;
 }
 </style>
