@@ -2,6 +2,12 @@
 
 WeUI UniApp 是基于 WeUI 视觉体系封装的 uni-app Vue 3 组件库，适用于 H5、小程序等 uni-app 项目。
 
+## 文档
+
+- 文档站：https://vueshow.github.io/weui-uniapp/
+- GitHub：https://github.com/vueshow/weui-uniapp
+- npm：https://www.npmjs.com/package/weui-uniapp
+
 ## 安装
 
 ```bash

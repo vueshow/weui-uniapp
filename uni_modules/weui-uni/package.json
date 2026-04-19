@@ -28,11 +28,11 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/weui/weui.git"
+    "url": "git+https://github.com/vueshow/weui-uniapp.git"
   },
-  "homepage": "https://github.com/weui/weui",
+  "homepage": "https://vueshow.github.io/weui-uniapp/",
   "bugs": {
-    "url": "https://github.com/weui/weui/issues"
+    "url": "https://github.com/vueshow/weui-uniapp/issues"
   },
   "license": "MIT",
   "peerDependencies": {
