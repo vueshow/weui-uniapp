@@ -34,6 +34,11 @@
     "build:quickapp-webview": "uni build -p quickapp-webview",
     "build:quickapp-webview-huawei": "uni build -p quickapp-webview-huawei",
     "build:quickapp-webview-union": "uni build -p quickapp-webview-union",
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs",
+    "site:dev": "concurrently -n demo,docs -c green,blue \"pnpm dev:h5\" \"pnpm docs:dev\"",
+    "site:build": "pnpm build:h5 && VITEPRESS_BASE=/weui-uniapp/ pnpm docs:build && mkdir -p docs/.vitepress/dist/demo && cp -R dist/build/h5/. docs/.vitepress/dist/demo",
     "lib:login": "npm login",
     "lib:whoami": "npm whoami",
     "lib:pack": "mkdir -p dist && pnpm --dir uni_modules/weui-uni pack --pack-destination ../../dist",
@@ -68,7 +73,9 @@
     "@dcloudio/uni-stacktracey": "3.0.0-5000720260410001",
     "@dcloudio/vite-plugin-uni": "3.0.0-5000720260410001",
     "@vue/runtime-core": "^3.4.21",
+    "concurrently": "^9.2.1",
     "sass": "^1.99.0",
-    "vite": "5.2.8"
+    "vite": "5.2.8",
+    "vitepress": "^1.6.4"
   }
 }

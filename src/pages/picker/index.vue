@@ -26,6 +26,7 @@
       @confirm="handleConfirm"
       @change="handleChange"
     />
+    {{ dateValue }}
     <weui-picker
       v-model="dateValue"
       v-model:visible="showDatePicker"
