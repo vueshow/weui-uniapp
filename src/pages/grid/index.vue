@@ -9,7 +9,7 @@
         v-for="item in items"
         :key="item"
         label="Grid"
-        icon="/static/logo.png"
+        icon="/static/icon_tabbar.png"
         @click="handleClick(item)"
       />
     </weui-grid>

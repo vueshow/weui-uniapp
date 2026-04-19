@@ -1,5 +1,5 @@
 <template>
-  <view role="button" class="weui-grid" @click="handleClick">
+  <view role="button" class="weui-grid" hover-class="weui-grid_active" @click="handleClick">
     <view class="weui-grid__icon">
       <slot name="icon">
         <image v-if="icon" :src="icon" mode="aspectFit" />
@@ -32,3 +32,30 @@ export default {
   },
 };
 </script>
+
+<style lang="scss">
+.weui-grid {
+  display: block;
+  text-decoration: none;
+}
+
+.weui-grid_active {
+  background-color: var(--weui-BG-COLOR-ACTIVE);
+}
+
+.weui-grid__icon {
+  line-height: 1;
+}
+
+.weui-grid__icon image,
+.weui-grid__icon uni-image,
+.weui-grid__icon .uni-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.weui-grid__label {
+  line-height: 1.4;
+}
+</style>
