@@ -108,3 +108,9 @@ export default {
   height: 24px;
 }
 </style>
+
+<style lang="scss">
+/* #ifdef MP */
+@import "../../styles/mp.scss";
+/* #endif */
+</style>

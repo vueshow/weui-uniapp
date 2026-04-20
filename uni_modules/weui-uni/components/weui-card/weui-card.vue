@@ -97,3 +97,9 @@ export default {
   background-color: var(--weui-BG-COLOR-ACTIVE);
 }
 </style>
+
+<style lang="scss">
+/* #ifdef MP */
+@import "../../styles/mp.scss";
+/* #endif */
+</style>

@@ -81,3 +81,9 @@ export default {
   border-bottom: 0;
 }
 </style>
+
+<style lang="scss">
+/* #ifdef MP */
+@import "../../styles/mp.scss";
+/* #endif */
+</style>

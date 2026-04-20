@@ -204,3 +204,9 @@ export default {
   transition: opacity 0.2s;
 }
 </style>
+
+<style lang="scss">
+/* #ifdef MP */
+@import "../../styles/mp.scss";
+/* #endif */
+</style>

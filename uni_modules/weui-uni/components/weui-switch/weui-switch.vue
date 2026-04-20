@@ -67,3 +67,9 @@ export default {
   transform: translateX(20px);
 }
 </style>
+
+<style lang="scss">
+/* #ifdef MP */
+@import "../../styles/mp.scss";
+/* #endif */
+</style>

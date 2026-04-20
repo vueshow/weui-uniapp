@@ -112,3 +112,9 @@ export default {
   margin-right: 16px;
 }
 </style>
+
+<style lang="scss">
+/* #ifdef MP */
+@import "../../styles/mp.scss";
+/* #endif */
+</style>

@@ -132,3 +132,9 @@ export default {
   },
 };
 </script>
+
+<style lang="scss">
+/* #ifdef MP */
+@import "../../styles/mp.scss";
+/* #endif */
+</style>

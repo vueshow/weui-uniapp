@@ -74,3 +74,9 @@ export default {
   right: -6px;
 }
 </style>
+
+<style lang="scss">
+/* #ifdef MP */
+@import "../../styles/mp.scss";
+/* #endif */
+</style>

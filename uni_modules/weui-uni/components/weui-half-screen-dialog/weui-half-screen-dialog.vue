@@ -267,3 +267,9 @@ export default {
   white-space: nowrap;
 }
 </style>
+
+<style lang="scss">
+/* #ifdef MP */
+@import "../../styles/mp.scss";
+/* #endif */
+</style>

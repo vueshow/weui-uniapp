@@ -21,3 +21,9 @@ export default {
   background-color: var(--weui-BG-2);
 }
 </style>
+
+<style lang="scss">
+/* #ifdef MP */
+@import "../../styles/mp.scss";
+/* #endif */
+</style>
