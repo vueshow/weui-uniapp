@@ -53,7 +53,7 @@ const getDefaultDemoBase = () => {
     return 'http://127.0.0.1:5175';
   }
 
-  return `${import.meta.env.BASE_URL}demo`;
+  return `${import.meta.env.BASE_URL}demo/`;
 };
 
 const demoBase = computed(() => trimTrailingSlash(getDefaultDemoBase()));
