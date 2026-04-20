@@ -96,6 +96,7 @@ export default {
             { name: 'Half-screen Dialog', path: '/pages/half-screen-dialog/index' },
             { name: 'Msg', path: '/pages/msg/index' },
             { name: 'Picker', path: '/pages/picker/index' },
+            { name: 'Address Picker', path: '/pages/address-picker/index' },
             { name: 'Toast', path: '/pages/toast/index' },
             { name: 'Information Bar', path: '/pages/information-bar/index' },
           ],

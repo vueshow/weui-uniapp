@@ -266,6 +266,14 @@
 				"navigationStyle": "custom"
 			}
 		}
+		},
+		{
+			"path": "pages/address-picker/index",
+			"style": {
+				"navigationBarTitleText": "Address Picker 地址选择",
+				"navigationStyle": "custom"
+			}
+		}
 	],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",

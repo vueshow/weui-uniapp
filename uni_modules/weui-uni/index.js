@@ -38,6 +38,7 @@ import WeuiInformationBar from './components/weui-information-bar/weui-informati
 import WeuiListTips from './components/weui-list-tips/weui-list-tips.vue';
 import WeuiSteps from './components/weui-steps/weui-steps.vue';
 import WeuiEmptyState from './components/weui-empty-state/weui-empty-state.vue';
+import WeuiAddressPicker from './components/weui-address-picker/weui-address-picker.vue';
 
 const components = [
   WeuiButton,
@@ -80,6 +81,7 @@ const components = [
   WeuiListTips,
   WeuiSteps,
   WeuiEmptyState,
+  WeuiAddressPicker,
 ];
 
 export {
@@ -123,6 +125,7 @@ export {
   WeuiListTips,
   WeuiSteps,
   WeuiEmptyState,
+  WeuiAddressPicker,
 };
 
 export default {

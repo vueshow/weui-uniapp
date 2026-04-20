@@ -38,6 +38,7 @@ const componentSidebar = [
       { text: 'Form Preview 表单预览', link: '/components/form-preview' },
       { text: 'Input 输入框', link: '/components/input' },
       { text: 'Picker 选择器', link: '/components/picker' },
+      { text: 'Address Picker 地址选择', link: '/components/address-picker' },
       { text: 'Radio 单选框', link: '/components/radio' },
       { text: 'Slider 滑块', link: '/components/slider' },
       { text: 'Switch 开关', link: '/components/switch' },
