@@ -22,12 +22,7 @@
 </template>
 
 <script>
-import WeuiIcon from '../../../uni_modules/weui-uni/components/weui-icon/weui-icon.vue';
-
 export default {
-  components: {
-    WeuiIcon,
-  },
   data() {
     return {
       messageIcons: [

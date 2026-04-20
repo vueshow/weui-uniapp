@@ -8,7 +8,7 @@
 @import 'weui-uniapp/styles/index.scss';
 ```
 
-如果项目不方便编译 Sass，也可以直接引入 CSS：
+H5 项目如果不方便编译 Sass，也可以直接引入完整 CSS。小程序端请继续使用 `styles/index.scss`，不要把完整 H5 CSS 打进 WXSS：
 
 ```css
 @import 'weui-uniapp/styles/weui.css';

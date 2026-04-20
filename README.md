@@ -63,7 +63,7 @@ export function createApp() {
 </template>
 ```
 
-如果项目暂时不方便编译 Sass，也可以引入完整 CSS：
+H5 项目如果暂时不方便编译 Sass，也可以引入完整 CSS。小程序端请继续使用 `styles/index.scss`，不要把完整 H5 CSS 打进 WXSS：
 
 ```js
 import 'weui-uniapp/styles/weui.css';

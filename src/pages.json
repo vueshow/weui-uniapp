@@ -265,7 +265,6 @@
 				"navigationBarTitleText": "Empty State 空状态",
 				"navigationStyle": "custom"
 			}
-		}
 		},
 		{
 			"path": "pages/address-picker/index",

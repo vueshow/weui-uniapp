@@ -1,9 +1,6 @@
-@import './weui.css';
 @import './theme.scss';
 
 page,
-body,
-.wx-root,
 .weui-uni-page {
   @include weui-theme-vars;
   color: var(--weui-FG-0);
@@ -12,24 +9,18 @@ body,
 }
 
 @media (prefers-color-scheme: dark) {
-  page:not([data-weui-theme='light']),
-  body:not([data-weui-theme='light']),
-  .wx-root:not([data-weui-theme='light']),
-  .weui-uni-page:not([data-weui-theme='light']) {
+  page,
+  .weui-uni-page {
     @include weui-dark-vars;
   }
 }
 
 page[data-weui-theme='dark'],
-body[data-weui-theme='dark'],
-.wx-root[data-weui-theme='dark'],
 .weui-uni-page[data-weui-theme='dark'] {
   @include weui-dark-vars;
 }
 
 page[data-weui-mode='care'],
-body[data-weui-mode='care'],
-.wx-root[data-weui-mode='care'],
 .weui-uni-page[data-weui-mode='care'] {
   @include weui-care-vars;
 }
