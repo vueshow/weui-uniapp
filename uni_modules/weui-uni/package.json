@@ -2,7 +2,7 @@
   "name": "weui-uniapp",
   "id": "weui-uni",
   "displayName": "WeUI UniApp",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "WeUI components for uni-app Vue 3.",
   "main": "index.js",
   "module": "index.js",
