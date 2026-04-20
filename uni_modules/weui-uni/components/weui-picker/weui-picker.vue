@@ -89,6 +89,10 @@
 const pad = (value) => `${value}`.padStart(2, '0');
 
 export default {
+  options: {
+    styleIsolation: 'shared',
+    addGlobalClass: true,
+  },
   name: 'WeuiPicker',
   props: {
     modelValue: {

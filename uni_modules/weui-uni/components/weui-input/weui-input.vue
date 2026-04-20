@@ -26,6 +26,10 @@
 
 <script>
 export default {
+  options: {
+    styleIsolation: 'shared',
+    addGlobalClass: true,
+  },
   name: 'WeuiInput',
   props: {
     modelValue: {

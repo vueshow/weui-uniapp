@@ -50,7 +50,20 @@ export function createApp() {
 }
 ```
 
-如果使用 uni-app easycom，也可以按需直接使用组件标签。
+H5 端可以通过 `app.use(WeuiUni)` 使用全量注册。小程序端需要编译期识别组件，推荐同时在 `pages.json` 配置 easycom：
+
+```json
+{
+  "easycom": {
+    "autoscan": true,
+    "custom": {
+      "^weui-(.*)": "weui-uniapp/components/weui-$1/weui-$1.vue"
+    }
+  }
+}
+```
+
+配置后可以直接使用 `<weui-button />`、`<weui-cell />` 等组件标签。
 
 ## 基础用法
 

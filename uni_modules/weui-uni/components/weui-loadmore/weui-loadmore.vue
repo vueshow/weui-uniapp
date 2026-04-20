@@ -16,6 +16,10 @@
 
 <script>
 export default {
+  options: {
+    styleIsolation: 'shared',
+    addGlobalClass: true,
+  },
   name: 'WeuiLoadmore',
   props: {
     loading: {

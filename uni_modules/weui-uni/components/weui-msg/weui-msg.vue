@@ -48,6 +48,10 @@
 
 <script>
 export default {
+  options: {
+    styleIsolation: 'shared',
+    addGlobalClass: true,
+  },
   name: 'WeuiMsg',
   props: {
     type: {

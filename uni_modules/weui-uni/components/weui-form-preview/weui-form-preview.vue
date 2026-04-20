@@ -42,6 +42,10 @@
 
 <script>
 export default {
+  options: {
+    styleIsolation: 'shared',
+    addGlobalClass: true,
+  },
   name: 'WeuiFormPreview',
   props: {
     label: {

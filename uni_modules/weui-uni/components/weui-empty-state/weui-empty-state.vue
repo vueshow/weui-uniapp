@@ -35,6 +35,10 @@
 
 <script>
 export default {
+  options: {
+    styleIsolation: 'shared',
+    addGlobalClass: true,
+  },
   name: 'WeuiEmptyState',
   props: {
     icon: {

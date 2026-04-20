@@ -33,6 +33,10 @@
 
 <script>
 export default {
+  options: {
+    styleIsolation: 'shared',
+    addGlobalClass: true,
+  },
   name: 'WeuiUploader',
   props: {
     modelValue: {

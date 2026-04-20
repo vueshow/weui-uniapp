@@ -92,6 +92,10 @@
 import chinaData from './china.json';
 
 export default {
+  options: {
+    styleIsolation: 'shared',
+    addGlobalClass: true,
+  },
   name: 'WeuiAddressPicker',
   props: {
     modelValue: {

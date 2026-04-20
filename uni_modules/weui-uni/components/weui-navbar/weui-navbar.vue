@@ -18,6 +18,10 @@
 
 <script>
 export default {
+  options: {
+    styleIsolation: 'shared',
+    addGlobalClass: true,
+  },
   name: 'WeuiNavbar',
   props: {
     modelValue: {

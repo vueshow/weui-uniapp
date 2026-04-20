@@ -90,6 +90,10 @@
 
 <script>
 export default {
+  options: {
+    styleIsolation: 'shared',
+    addGlobalClass: true,
+  },
   name: 'WeuiHalfScreenDialog',
   props: {
     modelValue: {

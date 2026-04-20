@@ -31,6 +31,10 @@
 
 <script>
 export default {
+  options: {
+    styleIsolation: 'shared',
+    addGlobalClass: true,
+  },
   name: 'WeuiInformationBar',
   props: {
     modelValue: {

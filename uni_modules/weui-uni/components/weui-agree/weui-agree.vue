@@ -14,6 +14,10 @@
 
 <script>
 export default {
+  options: {
+    styleIsolation: 'shared',
+    addGlobalClass: true,
+  },
   name: 'WeuiAgree',
   props: {
     modelValue: {

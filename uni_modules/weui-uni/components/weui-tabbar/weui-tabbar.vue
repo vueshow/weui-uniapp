@@ -24,6 +24,10 @@
 
 <script>
 export default {
+  options: {
+    styleIsolation: 'shared',
+    addGlobalClass: true,
+  },
   name: 'WeuiTabbar',
   props: {
     modelValue: {

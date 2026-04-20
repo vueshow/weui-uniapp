@@ -34,6 +34,10 @@
 
 <script>
 export default {
+  options: {
+    styleIsolation: 'shared',
+    addGlobalClass: true,
+  },
   name: 'WeuiDialog',
   props: {
     modelValue: {

@@ -51,6 +51,10 @@
 
 <script>
 export default {
+  options: {
+    styleIsolation: 'shared',
+    addGlobalClass: true,
+  },
   name: 'WeuiActionsheet',
   props: {
     modelValue: {
