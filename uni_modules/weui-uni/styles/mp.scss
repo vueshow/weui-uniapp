@@ -1,6 +1,7 @@
 @import './theme.scss';
 
 page,
+:host,
 .weui-uni-page {
   @include weui-theme-vars;
   color: var(--weui-FG-0);
@@ -10,17 +11,20 @@ page,
 
 @media (prefers-color-scheme: dark) {
   page,
+  :host,
   .weui-uni-page {
     @include weui-dark-vars;
   }
 }
 
 page[data-weui-theme='dark'],
+:host([data-weui-theme='dark']),
 .weui-uni-page[data-weui-theme='dark'] {
   @include weui-dark-vars;
 }
 
 page[data-weui-mode='care'],
+:host([data-weui-mode='care']),
 .weui-uni-page[data-weui-mode='care'] {
   @include weui-care-vars;
 }
