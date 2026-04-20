@@ -13,5 +13,11 @@ export default {
 </script>
 
 <style lang="scss">
+/* #ifdef MP */
+@import '../uni_modules/weui-uni/styles/mp.scss';
+/* #endif */
+
+/* #ifndef MP */
 @import '../uni_modules/weui-uni/styles/index.scss';
+/* #endif */
 </style>

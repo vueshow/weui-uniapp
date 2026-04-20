@@ -18,13 +18,19 @@ pnpm add weui-uniapp
 
 ## 引入样式
 
-在 `App.vue` 或全局样式入口中引入：
+在 `App.vue` 中按平台引入：
 
 ```scss
+/* #ifdef MP */
+@import 'weui-uniapp/styles/mp.scss';
+/* #endif */
+
+/* #ifndef MP */
 @import 'weui-uniapp/styles/index.scss';
+/* #endif */
 ```
 
-H5 项目如果不方便编译 Sass，也可以直接引入完整 CSS。小程序端请继续使用 `styles/index.scss`，不要把完整 H5 CSS 打进 WXSS：
+H5 项目如果不方便编译 Sass，也可以直接引入完整 CSS。小程序端请使用 `styles/mp.scss`，不要把完整 H5 CSS 打进 WXSS：
 
 ```css
 @import 'weui-uniapp/styles/weui.css';
@@ -115,6 +121,7 @@ pnpm pack
 - `index.js`
 - `components/`
 - `styles/index.scss`
+- `styles/mp.scss`
 - `styles/weui.css`
 - `README.md`
 - `package.json`

@@ -17,13 +17,23 @@ import { createSSRApp } from 'vue';
 import WeuiUni from 'weui-uniapp';
 import App from './App.vue';
 
-import 'weui-uniapp/styles/index.scss';
-
 export function createApp() {
   const app = createSSRApp(App);
   app.use(WeuiUni);
   return { app };
 }
+```
+
+在 `App.vue` 中按平台引入样式：
+
+```scss
+/* #ifdef MP */
+@import 'weui-uniapp/styles/mp.scss';
+/* #endif */
+
+/* #ifndef MP */
+@import 'weui-uniapp/styles/index.scss';
+/* #endif */
 ```
 
 ## 开发文档站

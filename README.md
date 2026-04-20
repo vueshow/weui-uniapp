@@ -33,20 +33,30 @@ npm install weui-uniapp
 
 ## 使用
 
-在 `src/main.js` 或 `src/main.ts` 中注册组件库并引入样式：
+在 `src/main.js` 或 `src/main.ts` 中注册组件库：
 
 ```js
 import { createSSRApp } from 'vue';
 import WeuiUni from 'weui-uniapp';
 import App from './App.vue';
 
-import 'weui-uniapp/styles/index.scss';
-
 export function createApp() {
   const app = createSSRApp(App);
   app.use(WeuiUni);
   return { app };
 }
+```
+
+在 `App.vue` 中按平台引入样式：
+
+```scss
+/* #ifdef MP */
+@import 'weui-uniapp/styles/mp.scss';
+/* #endif */
+
+/* #ifndef MP */
+@import 'weui-uniapp/styles/index.scss';
+/* #endif */
 ```
 
 页面中直接使用组件：
@@ -63,7 +73,7 @@ export function createApp() {
 </template>
 ```
 
-H5 项目如果暂时不方便编译 Sass，也可以引入完整 CSS。小程序端请继续使用 `styles/index.scss`，不要把完整 H5 CSS 打进 WXSS：
+H5 项目如果暂时不方便编译 Sass，也可以引入完整 CSS。小程序端请使用 `styles/mp.scss`，不要把完整 H5 CSS 打进 WXSS：
 
 ```js
 import 'weui-uniapp/styles/weui.css';

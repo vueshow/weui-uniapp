@@ -2,13 +2,19 @@
 
 ## 引入样式
 
-推荐在全局样式入口引入 Sass：
+推荐在 `App.vue` 中按平台引入 Sass：
 
 ```scss
+/* #ifdef MP */
+@import 'weui-uniapp/styles/mp.scss';
+/* #endif */
+
+/* #ifndef MP */
 @import 'weui-uniapp/styles/index.scss';
+/* #endif */
 ```
 
-H5 项目如果不方便编译 Sass，也可以直接引入完整 CSS。小程序端请继续使用 `styles/index.scss`，不要把完整 H5 CSS 打进 WXSS：
+H5 项目如果不方便编译 Sass，也可以直接引入完整 CSS。小程序端请使用 `styles/mp.scss`，不要把完整 H5 CSS 打进 WXSS：
 
 ```css
 @import 'weui-uniapp/styles/weui.css';
