@@ -26,12 +26,12 @@ export default {
   data() {
     return {
       showAddressPicker: false,
-      addressValue: [],
+      addressValue: '河南省/平顶山市/鲁山县',
     };
   },
   computed: {
     displayAddress() {
-      return this.addressValue.length ? this.addressValue.join(' / ') : '';
+      return this.addressValue || '';
     },
   },
   methods: {
@@ -41,7 +41,7 @@ export default {
     handleConfirm(result) {
       console.log('[AddressPicker confirm]', result);
       uni.showToast({
-        title: result.labels.join(' '),
+        title: result.labels.join(' / '),
         icon: 'none',
       });
     },

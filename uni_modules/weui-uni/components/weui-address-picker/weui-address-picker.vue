@@ -94,8 +94,12 @@ export default {
   name: 'WeuiAddressPicker',
   props: {
     modelValue: {
-      type: Array,
-      default: () => [],
+      type: String,
+      default: '',
+    },
+    separator: {
+      type: String,
+      default: '/',
     },
     visible: {
       type: Boolean,
@@ -257,30 +261,36 @@ export default {
       });
     },
     getInitialDraftValue() {
-      if (!Array.isArray(this.modelValue) || this.modelValue.length === 0) {
+      if (!this.modelValue || typeof this.modelValue !== 'string') {
+        return Array.from({ length: this.levelCount }, () => 0);
+      }
+
+      const labels = this.modelValue.split(this.separator);
+      if (labels.length === 0) {
         return Array.from({ length: this.levelCount }, () => 0);
       }
 
       const indices = [];
       let currentLevel = this.resolvedOptions;
 
-      for (let level = 0; level < this.modelValue.length; level++) {
-        const targetValue = this.modelValue[level];
-        const index = currentLevel.findIndex((item) => item[this.valueKey] === targetValue);
+      for (let level = 0; level < this.levelCount; level++) {
+        const targetLabel = labels[level] || '';
+        const index = currentLevel.findIndex((item) => {
+          const name = item[this.labelKey] ?? item[this.valueKey] ?? '';
+          return name === targetLabel || name.replace(/(省|市|区|县|自治州|地区|盟|旗)$/, '') === targetLabel;
+        });
         indices.push(index >= 0 ? index : 0);
         currentLevel =
-          index >= 0 && currentLevel[index] ? currentLevel[index][this.childrenKey] || [] : [];
-      }
-
-      while (indices.length < this.levelCount) {
-        indices.push(0);
+          index >= 0 && currentLevel[index]
+            ? currentLevel[index][this.childrenKey] || []
+            : [];
       }
 
       return indices;
     },
     getResult() {
       const items = [];
-      const values = [];
+      const labels = [];
       let currentLevel = this.resolvedOptions;
 
       for (let level = 0; level < this.levelCount; level++) {
@@ -288,15 +298,16 @@ export default {
         const columnData = this.columns[level] || [];
         const item = columnData[index];
         items.push(item?.raw ?? item);
-        values.push(item?.value ?? index);
+        const label = item?.label ?? '';
+        labels.push(label);
         const rawItem = currentLevel[index];
         currentLevel = rawItem?.[this.childrenKey] || [];
       }
 
       return {
-        value: values,
+        value: labels.filter(Boolean).join(this.separator),
         items,
-        labels: items.map((item) => item?.[this.labelKey] ?? item?.label ?? '').filter(Boolean),
+        labels: labels.filter(Boolean),
       };
     },
     clearCloseTimer() {
