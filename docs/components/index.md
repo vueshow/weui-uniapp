@@ -43,6 +43,7 @@
   <a class="component-card" href="./form-preview"><div class="component-card__name">Form Preview 表单预览</div><div class="component-card__desc">提交前的信息确认。</div></a>
   <a class="component-card" href="./input"><div class="component-card__name">Input 输入框</div><div class="component-card__desc">表单输入控件。</div></a>
   <a class="component-card" href="./picker"><div class="component-card__name">Picker 选择器</div><div class="component-card__desc">底部半屏选择器和日期选择。</div></a>
+  <a class="component-card" href="./address-picker"><div class="component-card__name">Address Picker 地址选择</div><div class="component-card__desc">省市区多级联动地址选择。</div></a>
   <a class="component-card" href="./radio"><div class="component-card__name">Radio 单选框</div><div class="component-card__desc">单选表单项。</div></a>
   <a class="component-card" href="./slider"><div class="component-card__name">Slider 滑块</div><div class="component-card__desc">数值范围选择。</div></a>
   <a class="component-card" href="./switch"><div class="component-card__name">Switch 开关</div><div class="component-card__desc">开关状态切换。</div></a>

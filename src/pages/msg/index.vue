@@ -1,6 +1,6 @@
 <template>
   <view class="page weui-uni-page">
-    <weui-navbar :items="tabs" v-model="activeTab" />
+    <weui-navbar v-model="activeTab" :items="tabs" />
 
     <weui-msg
       v-if="activeTab === 0"
@@ -11,10 +11,7 @@
       @action-click="handleAction"
     >
       <template #extra>
-        <weui-footer
-          text="Copyright © 2008-2016 weui.io"
-          :links="[{ text: '底部链接文本' }]"
-        />
+        <weui-footer text="Copyright © 2008-2016 weui.io" :links="[{ text: '底部链接文本' }]" />
       </template>
     </weui-msg>
 
@@ -28,10 +25,7 @@
       @action-click="handleAction"
     >
       <template #extra>
-        <weui-footer
-          text="Copyright © 2008-2016 weui.io"
-          :links="[{ text: '底部链接文本' }]"
-        />
+        <weui-footer text="Copyright © 2008-2016 weui.io" :links="[{ text: '底部链接文本' }]" />
       </template>
     </weui-msg>
 
@@ -84,9 +78,7 @@ export default {
         { text: '推荐操作', type: 'primary', value: 'primary' },
         { text: '辅助操作', type: 'default', value: 'default' },
       ],
-      warnActions: [
-        { text: '辅助操作', type: 'default', value: 'default' },
-      ],
+      warnActions: [{ text: '辅助操作', type: 'default', value: 'default' }],
     };
   },
   methods: {

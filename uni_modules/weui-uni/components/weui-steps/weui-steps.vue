@@ -32,7 +32,8 @@ export default {
     type: {
       type: String,
       default: 'vertical',
-      validator: (value) => ['vertical', 'horizonal', 'horizonal-primary', 'horizonal-center'].includes(value),
+      validator: (value) =>
+        ['vertical', 'horizonal', 'horizonal-primary', 'horizonal-center'].includes(value),
     },
     hideContent: {
       type: Boolean,
@@ -66,6 +67,6 @@ export default {
 
 <style lang="scss">
 /* #ifdef MP */
-@import "../../styles/mp.scss";
+@import '../../styles/mp.scss';
 /* #endif */
 </style>

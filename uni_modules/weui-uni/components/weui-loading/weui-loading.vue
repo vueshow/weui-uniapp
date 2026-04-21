@@ -75,7 +75,12 @@ export default {
       const style = {
         fontSize: typeof this.size === 'number' ? `${this.size}px` : this.size,
       };
-      if (this.color && this.type !== 'primary' && this.color !== 'brand' && this.color !== 'transparent') {
+      if (
+        this.color &&
+        this.type !== 'primary' &&
+        this.color !== 'brand' &&
+        this.color !== 'transparent'
+      ) {
         style.color = this.color;
       }
       return style;
@@ -108,6 +113,6 @@ export default {
 
 <style lang="scss">
 /* #ifdef MP */
-@import "../../styles/mp.scss";
+@import '../../styles/mp.scss';
 /* #endif */
 </style>

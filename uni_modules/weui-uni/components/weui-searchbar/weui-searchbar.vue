@@ -26,7 +26,7 @@
           @focus="handleFocus"
           @blur="handleBlur"
           @confirm="handleSearch"
-        />
+        >
         <view
           v-else
           class="weui-search-bar__input weui-search-bar__input_text"
@@ -129,7 +129,17 @@ export default {
       default: false,
     },
   },
-  emits: ['update:modelValue', 'input', 'search', 'clear', 'cancel', 'focus', 'blur', 'back', 'click'],
+  emits: [
+    'update:modelValue',
+    'input',
+    'search',
+    'clear',
+    'cancel',
+    'focus',
+    'blur',
+    'back',
+    'click',
+  ],
   data() {
     return {
       focused: false,
@@ -141,11 +151,14 @@ export default {
       return Boolean(this.modelValue);
     },
     isActive() {
-      return this.variant === 'outlined' || this.variant === 'homepage' || this.focused || this.hasValue;
+      return (
+        this.variant === 'outlined' || this.variant === 'homepage' || this.focused || this.hasValue
+      );
     },
     searchbarClass() {
       return {
-        'weui-search-bar_focusing': this.variant !== 'outlined' && this.variant !== 'homepage' && this.isActive,
+        'weui-search-bar_focusing':
+          this.variant !== 'outlined' && this.variant !== 'homepage' && this.isActive,
         'weui-search-bar_filled-grey': this.variant === 'grey',
         'weui-search-bar_outlined': this.variant === 'outlined',
         'weui-search-bar_homepage': this.variant === 'homepage',
@@ -214,6 +227,6 @@ export default {
 
 <style lang="scss">
 /* #ifdef MP */
-@import "../../styles/mp.scss";
+@import '../../styles/mp.scss';
 /* #endif */
 </style>

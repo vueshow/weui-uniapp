@@ -48,10 +48,7 @@
       </view>
 
       <template #extra>
-        <weui-footer
-          text="Copyright © 2008-2019 weui.io"
-          :links="[{ text: '底部链接文本' }]"
-        />
+        <weui-footer text="Copyright © 2008-2019 weui.io" :links="[{ text: '底部链接文本' }]" />
       </template>
     </weui-form>
 
@@ -128,9 +125,7 @@ export default {
         channels: ['wechat'],
         gender: 'male',
       },
-      formActions: [
-        { text: '确定', type: 'primary', value: 'submit' },
-      ],
+      formActions: [{ text: '确定', type: 'primary', value: 'submit' }],
       previewActions: [
         { text: '辅助操作', type: 'default', value: 'cancel' },
         { text: '主要操作', type: 'primary', value: 'confirm' },

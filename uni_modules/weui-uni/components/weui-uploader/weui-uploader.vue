@@ -13,8 +13,15 @@
           :class="{ 'weui-uploader__file_status': file.status }"
           @click="handlePreview(index)"
         >
-          <view class="weui-uploader__file__thumb" :style="{ backgroundImage: `url(${file.url})` }" />
-          <view v-if="deletable && !disabled" class="weui-uploader__file__delete" @click.stop="handleDelete(index)">
+          <view
+            class="weui-uploader__file__thumb"
+            :style="{ backgroundImage: `url(${file.url})` }"
+          />
+          <view
+            v-if="deletable && !disabled"
+            class="weui-uploader__file__delete"
+            @click.stop="handleDelete(index)"
+          >
             <text class="weui-icon-close" />
           </view>
           <view v-if="file.status" role="alert" class="weui-uploader__file-content">
@@ -135,6 +142,6 @@ export default {
 
 <style lang="scss">
 /* #ifdef MP */
-@import "../../styles/mp.scss";
+@import '../../styles/mp.scss';
 /* #endif */
 </style>

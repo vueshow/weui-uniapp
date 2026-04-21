@@ -1,9 +1,5 @@
 <template>
-  <label
-    class="weui-agree"
-    :class="agreeClass"
-    @click="toggle"
-  >
+  <label class="weui-agree" :class="agreeClass" @click="toggle">
     <text class="weui-agree__checkbox-check" :aria-checked="checked ? 'true' : 'false'" />
     <text class="weui-agree__checkbox" :class="{ 'weui-agree__checkbox_checked': checked }" />
     <text class="weui-agree__text">
@@ -94,6 +90,6 @@ export default {
 
 <style lang="scss">
 /* #ifdef MP */
-@import "../../styles/mp.scss";
+@import '../../styles/mp.scss';
 /* #endif */
 </style>

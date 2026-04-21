@@ -19,12 +19,7 @@
         >
           {{ cancelText }}
         </view>
-        <view
-          role="button"
-          class="weui-dialog__btn"
-          :class="confirmClass"
-          @click="handleConfirm"
-        >
+        <view role="button" class="weui-dialog__btn" :class="confirmClass" @click="handleConfirm">
           {{ confirmText }}
         </view>
       </view>
@@ -114,6 +109,6 @@ export default {
 
 <style lang="scss">
 /* #ifdef MP */
-@import "../../styles/mp.scss";
+@import '../../styles/mp.scss';
 /* #endif */
 </style>

@@ -47,9 +47,7 @@ export default {
       message: '错误提示',
       wechat: '',
       isWechatWarn: false,
-      actions: [
-        { text: '确定', type: 'primary', value: 'submit' },
-      ],
+      actions: [{ text: '确定', type: 'primary', value: 'submit' }],
     };
   },
   computed: {

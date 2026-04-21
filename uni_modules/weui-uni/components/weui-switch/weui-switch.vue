@@ -1,8 +1,5 @@
 <template>
-  <view
-    class="weui-switch-cp"
-    @click="handleToggle"
-  >
+  <view class="weui-switch-cp" @click="handleToggle">
     <checkbox
       class="weui-switch-cp__input"
       :checked="modelValue"
@@ -10,10 +7,7 @@
       :aria-checked="modelValue.toString()"
       :aria-disabled="disabled.toString()"
     />
-    <view
-      class="weui-switch-cp__box"
-      :class="{ 'weui-switch-cp__box_checked': modelValue }"
-    />
+    <view class="weui-switch-cp__box" :class="{ 'weui-switch-cp__box_checked': modelValue }" />
   </view>
 </template>
 
@@ -70,6 +64,6 @@ export default {
 
 <style lang="scss">
 /* #ifdef MP */
-@import "../../styles/mp.scss";
+@import '../../styles/mp.scss';
 /* #endif */
 </style>

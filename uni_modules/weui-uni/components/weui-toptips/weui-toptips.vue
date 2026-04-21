@@ -113,7 +113,9 @@ export default {
 .weui-toptips {
   opacity: 0;
   transform: translate3d(0, -8px, 0);
-  transition: opacity 0.18s ease, transform 0.18s ease;
+  transition:
+    opacity 0.18s ease,
+    transform 0.18s ease;
 }
 
 .weui-toptips_show {
@@ -133,6 +135,6 @@ export default {
 
 <style lang="scss">
 /* #ifdef MP */
-@import "../../styles/mp.scss";
+@import '../../styles/mp.scss';
 /* #endif */
 </style>

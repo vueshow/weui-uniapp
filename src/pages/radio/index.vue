@@ -6,10 +6,26 @@
     </view>
     <view class="page__bd">
       <weui-cell-group title="单选列表项" variant="radio">
-        <weui-radio v-model="checkedValue" value="standard" label="cell standard" @change="handleChange" />
-        <weui-radio v-model="checkedValue" value="selected" label="cell standard" @change="handleChange" />
+        <weui-radio
+          v-model="checkedValue"
+          value="standard"
+          label="cell standard"
+          @change="handleChange"
+        />
+        <weui-radio
+          v-model="checkedValue"
+          value="selected"
+          label="cell standard"
+          @change="handleChange"
+        />
         <weui-radio v-model="checkedValue" value="disabled" label="disabled option" disabled />
-        <weui-cell title="添加更多" active extra-class="weui-cell_link" clickable @click="handleAdd" />
+        <weui-cell
+          title="添加更多"
+          active
+          extra-class="weui-cell_link"
+          clickable
+          @click="handleAdd"
+        />
       </weui-cell-group>
     </view>
   </view>

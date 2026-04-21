@@ -24,13 +24,31 @@
       </weui-cell-group>
 
       <weui-cell-group title="带跳转的列表项">
-        <weui-cell title="cell standard" label="副标题" arrow clickable @click="handleClick('access-subtitle')" />
+        <weui-cell
+          title="cell standard"
+          label="副标题"
+          arrow
+          clickable
+          @click="handleClick('access-subtitle')"
+        />
         <weui-cell title="cell standard" arrow clickable @click="handleClick('access')" />
       </weui-cell-group>
 
       <weui-cell-group title="带说明、跳转的列表项">
-        <weui-cell title="cell standard" value="说明文字" arrow clickable @click="handleClick('access-value-1')" />
-        <weui-cell title="cell standard" value="说明文字" arrow clickable @click="handleClick('access-value-2')" />
+        <weui-cell
+          title="cell standard"
+          value="说明文字"
+          arrow
+          clickable
+          @click="handleClick('access-value-1')"
+        />
+        <weui-cell
+          title="cell standard"
+          value="说明文字"
+          arrow
+          clickable
+          @click="handleClick('access-value-2')"
+        />
       </weui-cell-group>
     </view>
   </view>
@@ -43,10 +61,10 @@ export default {
       uni.showToast({
         title: `点击: ${type}`,
         icon: 'none',
-      })
+      });
     },
   },
-}
+};
 </script>
 
 <style>

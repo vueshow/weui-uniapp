@@ -1,9 +1,5 @@
 <template>
-  <view
-    :role="loading ? 'alert' : 'status'"
-    class="weui-loadmore"
-    :class="loadmoreClass"
-  >
+  <view :role="loading ? 'alert' : 'status'" class="weui-loadmore" :class="loadmoreClass">
     <template v-if="loading">
       <view aria-hidden="true" role="img" aria-label="正在加载" class="weui-primary-loading">
         <view class="weui-primary-loading__dot" />
@@ -72,6 +68,6 @@ export default {
 
 <style lang="scss">
 /* #ifdef MP */
-@import "../../styles/mp.scss";
+@import '../../styles/mp.scss';
 /* #endif */
 </style>

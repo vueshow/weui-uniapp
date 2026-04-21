@@ -1,8 +1,5 @@
 <template>
-  <text
-    class="weui-badge"
-    :class="badgeClass"
-  >
+  <text class="weui-badge" :class="badgeClass">
     <template v-if="!dot">{{ displayText }}</template>
   </text>
 </template>
@@ -65,6 +62,6 @@ export default {
 
 <style lang="scss">
 /* #ifdef MP */
-@import "../../styles/mp.scss";
+@import '../../styles/mp.scss';
 /* #endif */
 </style>

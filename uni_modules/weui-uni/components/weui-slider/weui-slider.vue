@@ -81,7 +81,8 @@ export default {
       if (this.disabled) {
         return;
       }
-      uni.createSelectorQuery()
+      uni
+        .createSelectorQuery()
         .in(this)
         .select('.weui-slider__inner')
         .boundingClientRect((rect) => {
@@ -107,6 +108,7 @@ export default {
     },
     handleMouseDown(event) {
       this.updateByClientX(event.clientX, 'changing');
+      // #ifdef H5
       const handleMouseMove = (moveEvent) => {
         this.updateByClientX(moveEvent.clientX, 'changing');
       };
@@ -117,6 +119,7 @@ export default {
       };
       window.addEventListener('mousemove', handleMouseMove);
       window.addEventListener('mouseup', handleMouseUp);
+      // #endif
     },
   },
 };
@@ -130,6 +133,6 @@ export default {
 
 <style lang="scss">
 /* #ifdef MP */
-@import "../../styles/mp.scss";
+@import '../../styles/mp.scss';
 /* #endif */
 </style>

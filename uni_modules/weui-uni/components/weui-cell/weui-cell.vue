@@ -9,9 +9,9 @@
     <view v-if="$slots.left || $slots.icon || icon || $slots.hd" class="weui-cell__hd">
       <slot name="left">
         <slot name="hd">
-        <slot name="icon">
-          <image class="weui-cell__icon" :src="icon" mode="aspectFit" />
-        </slot>
+          <slot name="icon">
+            <image class="weui-cell__icon" :src="icon" mode="aspectFit" />
+          </slot>
         </slot>
       </slot>
     </view>
@@ -24,7 +24,7 @@
     <view v-if="$slots.right || $slots.value || value || arrow || $slots.ft" class="weui-cell__ft">
       <slot name="right">
         <slot name="ft">
-        <slot name="value">{{ value }}</slot>
+          <slot name="value">{{ value }}</slot>
         </slot>
       </slot>
     </view>
@@ -115,6 +115,6 @@ export default {
 
 <style lang="scss">
 /* #ifdef MP */
-@import "../../styles/mp.scss";
+@import '../../styles/mp.scss';
 /* #endif */
 </style>

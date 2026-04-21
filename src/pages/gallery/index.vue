@@ -35,11 +35,7 @@ const demoImage = '/static/logo.png';
 export default {
   data() {
     return {
-      files: [
-        { url: demoImage },
-        { url: demoImage },
-        { url: demoImage },
-      ],
+      files: [{ url: demoImage }, { url: demoImage }, { url: demoImage }],
       currentIndex: 0,
       galleryVisible: false,
     };

@@ -8,11 +8,7 @@
       <view class="result-display">
         <text>已选地址：{{ displayAddress || '请选择' }}</text>
       </view>
-      <weui-button
-        type="default"
-        text="选择地址"
-        @click="showAddressPicker = true"
-      />
+      <weui-button type="default" text="选择地址" @click="showAddressPicker = true" />
     </view>
 
     <weui-address-picker

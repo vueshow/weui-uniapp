@@ -5,7 +5,8 @@
         <image class="page__logo" src="/static/weui-home/logo.png" mode="heightFix" />
       </view>
       <view class="page__desc">
-        WeUI 是一套同微信原生视觉体验一致的基础样式库，由微信官方设计团队为微信内网页和微信小程序量身设计，令用户的使用感知更加统一。
+        WeUI
+        是一套同微信原生视觉体验一致的基础样式库，由微信官方设计团队为微信内网页和微信小程序量身设计，令用户的使用感知更加统一。
       </view>
     </view>
 
@@ -112,9 +113,7 @@ export default {
         {
           name: '搜索相关',
           icon: `${iconBase}icon_nav_search.png`,
-          items: [
-            { name: 'Search Bar', path: '/pages/searchbar/index' },
-          ],
+          items: [{ name: 'Search Bar', path: '/pages/searchbar/index' }],
         },
       ],
     };

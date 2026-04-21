@@ -6,20 +6,13 @@
     :aria-hidden="(!opened).toString()"
     class="weui-picker-wrap"
   >
-    <view
-      class="weui-mask"
-      :class="maskClass"
-      @click="handleMaskClick"
-    />
-    <view
-      class="weui-half-screen-dialog weui-picker"
-      :class="pickerClass"
-      tabindex="-1"
-    >
+    <view class="weui-mask" :class="maskClass" @click="handleMaskClick" />
+    <view class="weui-half-screen-dialog weui-picker" :class="pickerClass" tabindex="-1">
       <view class="weui-half-screen-dialog__hd" @touchmove.stop.prevent>
         <view v-if="showClose" class="weui-half-screen-dialog__hd__side">
           <button class="weui-btn_icon weui-wa-hotarea" @click="handleCancel">
-            {{ closeText }}<text class="weui-icon-close-thin" />
+            {{ closeText }}
+            <text class="weui-icon-close-thin" />
           </button>
         </view>
         <view class="weui-half-screen-dialog__hd__main">
@@ -40,7 +33,9 @@
             <view class="weui-picker__indicator" />
             <view
               class="weui-picker__content"
-              :class="{ 'weui-picker__content_dragging': dragState && dragState.columnIndex === columnIndex }"
+              :class="{
+                'weui-picker__content_dragging': dragState && dragState.columnIndex === columnIndex,
+              }"
               :style="getContentStyle(columnIndex)"
               @mousedown="handleDragStart(columnIndex, $event)"
               @mousemove="handleDragMove"
@@ -273,7 +268,9 @@ export default {
     },
     getInitialValue() {
       if (this.mode === 'date') {
-        const value = this.modelValue || `${new Date().getFullYear()}-${pad(new Date().getMonth() + 1)}-${pad(new Date().getDate())}`;
+        const value =
+          this.modelValue ||
+          `${new Date().getFullYear()}-${pad(new Date().getMonth() + 1)}-${pad(new Date().getDate())}`;
         const [year, month, day] = `${value}`.split('-').map((item) => Number(item));
         const startYear = Number(`${this.start}`.slice(0, 4)) || 1990;
         const endYear = Number(`${this.end}`.slice(0, 4)) || new Date().getFullYear();
@@ -309,7 +306,9 @@ export default {
         };
       }
 
-      const items = this.draftValue.map((index, columnIndex) => this.columns[columnIndex]?.[Number(index)]);
+      const items = this.draftValue.map(
+        (index, columnIndex) => this.columns[columnIndex]?.[Number(index)],
+      );
 
       return {
         value: this.mode === 'multiSelector' ? [...this.draftValue] : this.draftValue[0],
@@ -382,7 +381,9 @@ export default {
       return (2 - Number(index || 0)) * 56;
     },
     getEventY(event) {
-      return Number(event?.changedTouches?.[0]?.pageY ?? event?.touches?.[0]?.pageY ?? event?.pageY ?? 0);
+      return Number(
+        event?.changedTouches?.[0]?.pageY ?? event?.touches?.[0]?.pageY ?? event?.pageY ?? 0,
+      );
     },
     getContentStyle(columnIndex) {
       const selectedIndex = Number(this.draftValue[columnIndex] || 0);
@@ -419,7 +420,10 @@ export default {
       const column = this.columns[this.dragState.columnIndex] || [];
       const maxTranslate = this.getTranslateByIndex(0);
       const minTranslate = this.getTranslateByIndex(Math.max(0, column.length - 1));
-      const translateY = Math.max(minTranslate, Math.min(maxTranslate, this.dragState.startTranslateY + deltaY));
+      const translateY = Math.max(
+        minTranslate,
+        Math.min(maxTranslate, this.dragState.startTranslateY + deltaY),
+      );
       const nextIndex = this.getSelectableIndex(
         this.dragState.columnIndex,
         Math.round(2 - translateY / 56),
@@ -529,6 +533,6 @@ export default {
 
 <style lang="scss">
 /* #ifdef MP */
-@import "../../styles/mp.scss";
+@import '../../styles/mp.scss';
 /* #endif */
 </style>

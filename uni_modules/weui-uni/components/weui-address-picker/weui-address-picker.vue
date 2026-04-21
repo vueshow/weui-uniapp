@@ -6,20 +6,13 @@
     :aria-hidden="(!opened).toString()"
     class="weui-picker-wrap"
   >
-    <view
-      class="weui-mask"
-      :class="maskClass"
-      @click="handleMaskClick"
-    />
-    <view
-      class="weui-half-screen-dialog weui-picker"
-      :class="pickerClass"
-      tabindex="-1"
-    >
+    <view class="weui-mask" :class="maskClass" @click="handleMaskClick" />
+    <view class="weui-half-screen-dialog weui-picker" :class="pickerClass" tabindex="-1">
       <view class="weui-half-screen-dialog__hd" @touchmove.stop.prevent>
         <view v-if="showClose" class="weui-half-screen-dialog__hd__side">
           <button class="weui-btn_icon weui-wa-hotarea" @click="handleCancel">
-            {{ closeText }}<text class="weui-icon-close-thin" />
+            {{ closeText }}
+            <text class="weui-icon-close-thin" />
           </button>
         </view>
         <view class="weui-half-screen-dialog__hd__main">
@@ -40,7 +33,9 @@
             <view class="weui-picker__indicator" />
             <view
               class="weui-picker__content"
-              :class="{ 'weui-picker__content_dragging': dragState && dragState.columnIndex === columnIndex }"
+              :class="{
+                'weui-picker__content_dragging': dragState && dragState.columnIndex === columnIndex,
+              }"
               :style="getContentStyle(columnIndex)"
               @mousedown="handleDragStart(columnIndex, $event)"
               @mousemove="handleDragMove"
@@ -163,9 +158,6 @@ export default {
       closeTimer: null,
     };
   },
-  created() {
-    this.draftValue = this.getInitialDraftValue();
-  },
   computed: {
     resolvedOptions() {
       return this.options || chinaData;
@@ -224,6 +216,9 @@ export default {
       },
     },
   },
+  created() {
+    this.draftValue = this.getInitialDraftValue();
+  },
   beforeUnmount() {
     this.clearCloseTimer();
   },
@@ -271,11 +266,10 @@ export default {
 
       for (let level = 0; level < this.modelValue.length; level++) {
         const targetValue = this.modelValue[level];
-        const index = currentLevel.findIndex(
-          (item) => item[this.valueKey] === targetValue,
-        );
+        const index = currentLevel.findIndex((item) => item[this.valueKey] === targetValue);
         indices.push(index >= 0 ? index : 0);
-        currentLevel = (index >= 0 && currentLevel[index]) ? currentLevel[index][this.childrenKey] || [] : [];
+        currentLevel =
+          index >= 0 && currentLevel[index] ? currentLevel[index][this.childrenKey] || [] : [];
       }
 
       while (indices.length < this.levelCount) {
@@ -372,7 +366,9 @@ export default {
       return (2 - Number(index || 0)) * 56;
     },
     getEventY(event) {
-      return Number(event?.changedTouches?.[0]?.pageY ?? event?.touches?.[0]?.pageY ?? event?.pageY ?? 0);
+      return Number(
+        event?.changedTouches?.[0]?.pageY ?? event?.touches?.[0]?.pageY ?? event?.pageY ?? 0,
+      );
     },
     getContentStyle(columnIndex) {
       const selectedIndex = Number(this.draftValue[columnIndex] || 0);
@@ -407,7 +403,10 @@ export default {
       const column = this.columns[this.dragState.columnIndex] || [];
       const maxTranslate = this.getTranslateByIndex(0);
       const minTranslate = this.getTranslateByIndex(Math.max(0, column.length - 1));
-      const translateY = Math.max(minTranslate, Math.min(maxTranslate, this.dragState.startTranslateY + deltaY));
+      const translateY = Math.max(
+        minTranslate,
+        Math.min(maxTranslate, this.dragState.startTranslateY + deltaY),
+      );
       const nextIndex = this.getSelectableIndex(
         this.dragState.columnIndex,
         Math.round(2 - translateY / 56),
@@ -513,6 +512,262 @@ export default {
 
 <style lang="scss">
 /* #ifdef MP */
-@import "../../styles/mp.scss";
+@import '../../styles/mp.scss';
+
+.weui-half-screen-dialog {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  min-height: 255px;
+  max-height: 75%;
+  z-index: 5000;
+  line-height: 1.4;
+  background-color: #fff;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  overflow: hidden;
+  padding: 0 24px;
+  padding: 0 calc(24px + constant(safe-area-inset-right)) constant(safe-area-inset-bottom) calc(24px + constant(safe-area-inset-left));
+  padding: 0 calc(24px + env(safe-area-inset-right)) env(safe-area-inset-bottom) calc(24px + env(safe-area-inset-left));
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  outline: 0;
+}
+
+.weui-half-screen-dialog__hd {
+  min-height: 64px;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.weui-half-screen-dialog__hd .weui-btn_icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: inherit;
+}
+
+.weui-half-screen-dialog__hd .weui-btn_icon:active {
+  opacity: 0.5;
+}
+
+.weui-half-screen-dialog__hd__side {
+  position: relative;
+  left: -8px;
+}
+
+.weui-half-screen-dialog__hd__main {
+  flex: 1;
+}
+
+.weui-half-screen-dialog__hd__side + .weui-half-screen-dialog__hd__main {
+  text-align: center;
+  padding: 0 40px;
+}
+
+.weui-half-screen-dialog__title {
+  display: block;
+  color: rgba(0, 0, 0, 0.9);
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.weui-half-screen-dialog__subtitle {
+  display: block;
+  color: rgba(0, 0, 0, 0.55);
+  font-size: 10px;
+}
+
+.weui-half-screen-dialog__bd {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  word-wrap: break-word;
+  padding-bottom: 56px;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.9);
+}
+
+.weui-half-screen-dialog__ft {
+  padding: 0 0 64px;
+  text-align: center;
+}
+
+.weui-picker {
+  position: fixed;
+  width: 100%;
+  box-sizing: border-box;
+  left: 0;
+  bottom: 0;
+  z-index: 5000;
+  background-color: #fff;
+  padding-left: constant(safe-area-inset-left);
+  padding-left: env(safe-area-inset-left);
+  padding-right: constant(safe-area-inset-right);
+  padding-right: env(safe-area-inset-right);
+  backface-visibility: hidden;
+  transform: translate(0, 100%);
+  transition: transform 0.3s;
+  outline: 0;
+}
+
+.weui-picker .weui-half-screen-dialog__hd {
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.weui-picker .weui-half-screen-dialog__bd {
+  overflow: visible;
+}
+
+.weui-picker__bd {
+  display: flex;
+  position: relative;
+  background-color: #fff;
+  height: 240px;
+  overflow: hidden;
+}
+
+.weui-picker__group {
+  flex: 1;
+  position: relative;
+  height: 100%;
+  font-size: 17px;
+}
+
+.weui-picker__group:first-child .weui-picker__indicator {
+  left: 8px;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+
+.weui-picker__group:last-child .weui-picker__indicator {
+  right: 8px;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.weui-picker__mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  z-index: 3;
+  pointer-events: none;
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.6)), linear-gradient(0deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.6));
+  background-position: top, bottom;
+  background-size: 100% 112px;
+  background-repeat: no-repeat;
+  transform: translateZ(0);
+}
+
+.weui-picker__indicator {
+  height: 56px;
+  position: absolute;
+  top: 112px;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  background: #f7f7f7;
+}
+
+.weui-picker__content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+  transition: transform 0.3s;
+  will-change: transform;
+  cursor: grab;
+}
+
+.weui-picker__content_dragging {
+  transition: none;
+  cursor: grabbing;
+}
+
+.weui-picker__item {
+  height: 56px;
+  line-height: 56px;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.9);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.weui-picker__item_disabled {
+  color: rgba(0, 0, 0, 0.55);
+}
+
+.weui-picker__btn {
+  display: inline-block;
+  vertical-align: top;
+  padding: 0 24px;
+}
+
+.weui-btn::after,
+.weui-btn_icon::after {
+  border: 0;
+}
+
+@keyframes weuiSlideUp {
+  from {
+    transform: translate3d(0, 100%, 0);
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.weui-animate-slide-up {
+  animation: weuiSlideUp ease 0.3s forwards;
+}
+
+@keyframes weuiSlideDown {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(0, 100%, 0);
+  }
+}
+
+.weui-animate-slide-down {
+  animation: weuiSlideDown ease 0.3s forwards;
+}
+
+@keyframes weuiFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.weui-animate-fade-in {
+  animation: weuiFadeIn ease 0.3s forwards;
+}
+
+@keyframes weuiFadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.weui-animate-fade-out {
+  animation: weuiFadeOut ease 0.3s forwards;
+}
+
 /* #endif */
 </style>

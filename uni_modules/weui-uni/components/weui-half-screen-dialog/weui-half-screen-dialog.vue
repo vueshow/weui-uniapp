@@ -1,15 +1,11 @@
 <template>
-  <view
-    v-if="rendered"
-    role="dialog"
-    aria-modal="true"
-    :aria-hidden="(!visible).toString()"
-  >
-    <view class="weui-mask weui-transition" :class="{ 'weui-transition_show': visible }" @click="handleMaskClick" />
+  <view v-if="rendered" role="dialog" aria-modal="true" :aria-hidden="(!visible).toString()">
     <view
-      class="weui-half-screen-dialog weui-transition"
-      :class="dialogClass"
-    >
+      class="weui-mask weui-transition"
+      :class="{ 'weui-transition_show': visible }"
+      @click="handleMaskClick"
+    />
+    <view class="weui-half-screen-dialog weui-transition" :class="dialogClass">
       <view class="weui-half-screen-dialog__hd">
         <template v-if="grab">
           <view class="weui-half-screen-dialog__hd__grab">
@@ -21,7 +17,8 @@
             <slot name="header">
               <view class="weui-half-screen-dialog__hd__side">
                 <button class="weui-btn_icon weui-wa-hotarea" hover-class="none" @click="close">
-                  {{ closeText }}<text :class="closeIconClass" />
+                  {{ closeText }}
+                  <text :class="closeIconClass" />
                 </button>
               </view>
               <view class="weui-half-screen-dialog__hd__main">
@@ -38,7 +35,8 @@
           <view v-if="showClose || $slots.left" class="weui-half-screen-dialog__hd__side">
             <slot name="left">
               <button class="weui-btn_icon weui-wa-hotarea" hover-class="none" @click="close">
-                {{ closeText }}<text :class="closeIconClass" />
+                {{ closeText }}
+                <text :class="closeIconClass" />
               </button>
             </slot>
           </view>
@@ -54,7 +52,10 @@
         </slot>
       </view>
 
-      <view class="weui-half-screen-dialog__bd" :class="{ 'weui-bottom-fixed-opr-page__content': bottomFixed }">
+      <view
+        class="weui-half-screen-dialog__bd"
+        :class="{ 'weui-bottom-fixed-opr-page__content': bottomFixed }"
+      >
         <slot />
       </view>
 
@@ -77,7 +78,10 @@
               {{ action.text }}
             </button>
           </view>
-          <view v-if="attachment || $slots.attachment" class="weui-half-screen-dialog__attachment-area">
+          <view
+            v-if="attachment || $slots.attachment"
+            class="weui-half-screen-dialog__attachment-area"
+          >
             <slot name="attachment">
               <text class="weui-link" @click="handleAttachment">{{ attachment }}</text>
             </slot>
@@ -270,6 +274,6 @@ export default {
 
 <style lang="scss">
 /* #ifdef MP */
-@import "../../styles/mp.scss";
+@import '../../styles/mp.scss';
 /* #endif */
 </style>

@@ -16,6 +16,7 @@ dist
 unpackage
 docs/.vitepress/dist
 docs/.vitepress/cache
+packages
 
 # OS files
 .DS_Store
@@ -37,3 +38,10 @@ Thumbs.db
 *.sw?
 *.swp
 *~
+
+# ESLint cache
+.eslintcache
+
+# Test coverage
+coverage/
+.workbuddy

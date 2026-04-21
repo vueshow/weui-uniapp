@@ -29,7 +29,11 @@
           :key="action.text || index"
           role="button"
           class="weui-form-preview__btn"
-          :class="action.type === 'primary' ? 'weui-form-preview__btn_primary' : 'weui-form-preview__btn_default'"
+          :class="
+            action.type === 'primary'
+              ? 'weui-form-preview__btn_primary'
+              : 'weui-form-preview__btn_default'
+          "
           hover-class="none"
           @click="handleAction(action, index)"
         >
@@ -84,6 +88,6 @@ export default {
 
 <style lang="scss">
 /* #ifdef MP */
-@import "../../styles/mp.scss";
+@import '../../styles/mp.scss';
 /* #endif */
 </style>

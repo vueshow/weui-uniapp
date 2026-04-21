@@ -6,11 +6,7 @@
     </view>
 
     <view class="page__bd page__bd_spacing">
-      <view
-        v-for="item in messageIcons"
-        :key="item.title"
-        class="icon-box"
-      >
+      <view v-for="item in messageIcons" :key="item.title" class="icon-box">
         <weui-icon :type="item.type" :size="item.size" :label="item.title" />
         <view class="icon-box__ctn">
           <view class="icon-box__title">{{ item.title }}</view>
@@ -101,7 +97,7 @@ export default {
   flex-shrink: 100;
 }
 
-.icon-box [class*="weui-icon-"] {
+.icon-box [class*='weui-icon-'] {
   margin-right: 18px;
 }
 

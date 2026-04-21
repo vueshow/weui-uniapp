@@ -5,16 +5,8 @@
       <view class="page__desc">多列选择器，需要配合js实现</view>
     </view>
     <view class="page__bd page__bd_spacing">
-      <weui-button
-        type="default"
-        text="单列选择器"
-        @click="showPicker = true"
-      />
-      <weui-button
-        type="default"
-        text="日期选择器"
-        @click="showDatePicker = true"
-      />
+      <weui-button type="default" text="单列选择器" @click="showPicker = true" />
+      <weui-button type="default" text="日期选择器" @click="showDatePicker = true" />
     </view>
 
     <weui-picker

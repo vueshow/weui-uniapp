@@ -13,12 +13,9 @@
         <view class="weui-form__tips-area">
           <view class="weui-form__tips__group weui-form__tips__group_primary">
             <view class="weui-form__tips__wrp">
-              <weui-agree
-                v-model="agree1"
-                :warn="showWarn"
-                :animated="warnAnimated"
-              >
-                阅读并同意<text class="weui-link">《相关条款》</text>
+              <weui-agree v-model="agree1" :warn="showWarn" :animated="warnAnimated">
+                阅读并同意
+                <text class="weui-link">《相关条款》</text>
               </weui-agree>
             </view>
             <view class="weui-form__tips__wrp">
@@ -27,7 +24,9 @@
           </view>
         </view>
         <view class="weui-form__opr-area">
-          <button class="weui-btn weui-btn_primary" hover-class="weui-btn_active" @click="submit">确定</button>
+          <button class="weui-btn weui-btn_primary" hover-class="weui-btn_active" @click="submit">
+            确定
+          </button>
         </view>
         <view v-if="showWarn" class="weui-hidden_abs" role="alert">未同意《相关条款》</view>
       </view>

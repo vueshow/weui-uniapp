@@ -1,6 +1,6 @@
 <template>
   <view class="page">
-    <weui-navbar :items="tabs" v-model="activeTab" />
+    <weui-navbar v-model="activeTab" :items="tabs" />
 
     <weui-empty-state
       v-if="activeTab === 0"
@@ -18,9 +18,7 @@
       :actions="searchActions"
       @action-click="handleAction"
     >
-      <template #extra>
-        搜索建议：减少筛选条件或使用更短关键词
-      </template>
+      <template #extra>搜索建议：减少筛选条件或使用更短关键词</template>
     </weui-empty-state>
 
     <weui-empty-state
@@ -44,16 +42,12 @@ export default {
         { label: '无结果', value: 1 },
         { label: '异常', value: 2 },
       ],
-      primaryActions: [
-        { text: '刷新', type: 'primary' },
-      ],
+      primaryActions: [{ text: '刷新', type: 'primary' }],
       searchActions: [
         { text: '重新搜索', type: 'primary' },
         { text: '清空条件', type: 'default' },
       ],
-      networkActions: [
-        { text: '重试', type: 'primary' },
-      ],
+      networkActions: [{ text: '重试', type: 'primary' }],
     };
   },
   methods: {

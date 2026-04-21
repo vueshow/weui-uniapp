@@ -121,11 +121,10 @@ export default {
   border: 0 !important;
 }
 </style>
-<style>
-</style>
+<style></style>
 
 <style lang="scss">
 /* #ifdef MP */
-@import "../../styles/mp.scss";
+@import '../../styles/mp.scss';
 /* #endif */
 </style>

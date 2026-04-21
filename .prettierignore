@@ -1,0 +1,7 @@
+dist
+unpackage
+node_modules
+docs/.vitepress
+pnpm-lock.yaml
+*.min.js
+*.min.css

@@ -9,10 +9,12 @@
           <view class="article-section">
             <view class="article-h4">四级标题</view>
             <view class="article-p">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+              incididunt ut labore et dolore magna aliqua.
             </view>
             <view class="article-p">
-              Ut enim ad minim veniam, cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
+              Ut enim ad minim veniam, cillum dolore eu fugiat nulla pariatur. Excepteur sint
+              occaecat cupidatat non proident.
             </view>
             <image class="article-img" src="/static/logo.png" mode="aspectFit" />
             <image class="article-img" src="/static/logo.png" mode="aspectFit" />
@@ -102,7 +104,7 @@ export default {};
 }
 
 .article-li::before {
-  content: "•";
+  content: '•';
   margin-right: 8px;
 }
 
@@ -115,6 +117,6 @@ export default {};
 }
 
 .article-list_order .article-li::before {
-  content: counter(article-list) ".";
+  content: counter(article-list) '.';
 }
 </style>

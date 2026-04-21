@@ -6,10 +6,26 @@
     </view>
     <view class="page__bd">
       <weui-cell-group title="复选列表项" variant="checkbox">
-        <weui-checkbox v-model="checkedValues" value="standard" label="standard is dealt for u." @change="handleChange" />
-        <weui-checkbox v-model="checkedValues" value="dealicient" label="standard is dealicient for u." @change="handleChange" />
+        <weui-checkbox
+          v-model="checkedValues"
+          value="standard"
+          label="standard is dealt for u."
+          @change="handleChange"
+        />
+        <weui-checkbox
+          v-model="checkedValues"
+          value="dealicient"
+          label="standard is dealicient for u."
+          @change="handleChange"
+        />
         <weui-checkbox v-model="checkedValues" value="disabled" label="disabled option" disabled />
-        <weui-cell title="添加更多" active extra-class="weui-cell_link" clickable @click="handleAdd" />
+        <weui-cell
+          title="添加更多"
+          active
+          extra-class="weui-cell_link"
+          clickable
+          @click="handleAdd"
+        />
       </weui-cell-group>
     </view>
   </view>

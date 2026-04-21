@@ -13,32 +13,63 @@
 
         <weui-button text="次要操作" type="default" @click="handleClick('default')" />
         <weui-button type="default" :loading="true" @click="handleClick('default-loading-only')" />
-        <weui-button text="次要操作" type="default" :loading="true" @click="handleClick('default-loading')" />
+        <weui-button
+          text="次要操作"
+          type="default"
+          :loading="true"
+          @click="handleClick('default-loading')"
+        />
         <weui-button text="次要操作" type="default" :disabled="true" />
 
         <weui-button text="警示操作" type="warn" @click="handleClick('warn')" />
         <weui-button type="warn" :loading="true" @click="handleClick('warn-loading-only')" />
-        <weui-button text="警示操作" type="warn" :loading="true" @click="handleClick('warn-loading')" />
+        <weui-button
+          text="警示操作"
+          type="warn"
+          :loading="true"
+          @click="handleClick('warn-loading')"
+        />
         <weui-button text="警示操作" type="warn" :disabled="true" />
       </view>
 
       <view class="button-sp-area">
         <weui-button text="按钮宽度" @click="handleClick('width-short')" />
         <weui-button text="按钮宽度自适应内容" @click="handleClick('width-auto')" />
-        <weui-button text="按钮宽度自适应内容，达到最大值后折行，最大行数两行的示例" @click="handleClick('width-multiline')" />
-        <weui-button text="按钮宽度自适应内容" :loading="true" @click="handleClick('width-auto-loading')" />
-        <weui-button text="按钮宽度自适应内容，达到最大值后折行，最大行数两行的示例" :loading="true" @click="handleClick('width-multiline-loading')" />
+        <weui-button
+          text="按钮宽度自适应内容，达到最大值后折行，最大行数两行的示例"
+          @click="handleClick('width-multiline')"
+        />
+        <weui-button
+          text="按钮宽度自适应内容"
+          :loading="true"
+          @click="handleClick('width-auto-loading')"
+        />
+        <weui-button
+          text="按钮宽度自适应内容，达到最大值后折行，最大行数两行的示例"
+          :loading="true"
+          @click="handleClick('width-multiline-loading')"
+        />
       </view>
 
       <view class="button-sp-area">
         <weui-button text="Medium" size="medium" @click="handleClick('medium')" />
-        <weui-button text="Medium" type="default" size="medium" @click="handleClick('medium-default')" />
+        <weui-button
+          text="Medium"
+          type="default"
+          size="medium"
+          @click="handleClick('medium-default')"
+        />
         <weui-button text="Medium" type="warn" size="medium" @click="handleClick('medium-warn')" />
       </view>
 
       <view class="button-sp-area overlay">
         <weui-button text="overlay 按钮" overlay @click="handleClick('overlay-primary')" />
-        <weui-button text="overlay 按钮" type="default" overlay @click="handleClick('overlay-default')" />
+        <weui-button
+          text="overlay 按钮"
+          type="default"
+          overlay
+          @click="handleClick('overlay-default')"
+        />
         <weui-button text="overlay 按钮" type="warn" overlay @click="handleClick('overlay-warn')" />
       </view>
 
@@ -49,15 +80,54 @@
       </view>
 
       <view class="button-sp-area">
-        <weui-button text="按钮" type="primary" size="mini" :block="false" @click="handleClick('mini-primary')" />
-        <weui-button text="按钮" type="default" size="mini" :block="false" @click="handleClick('mini-default')" />
-        <weui-button text="按钮" type="warn" size="mini" :block="false" @click="handleClick('mini-warn')" />
+        <weui-button
+          text="按钮"
+          type="primary"
+          size="mini"
+          :block="false"
+          @click="handleClick('mini-primary')"
+        />
+        <weui-button
+          text="按钮"
+          type="default"
+          size="mini"
+          :block="false"
+          @click="handleClick('mini-default')"
+        />
+        <weui-button
+          text="按钮"
+          type="warn"
+          size="mini"
+          :block="false"
+          @click="handleClick('mini-warn')"
+        />
       </view>
 
       <view class="button-sp-area margin">
-        <weui-button class="weui-btn_margin-reset" text="按钮" type="default" size="mini" :block="false" @click="handleClick('mini-margin-default')" />
-        <weui-button class="weui-btn_margin-reset" text="按钮" type="primary" size="mini" :block="false" @click="handleClick('mini-margin-primary')" />
-        <weui-button class="weui-btn_margin-reset" text="按钮" type="warn" size="mini" :block="false" @click="handleClick('mini-margin-warn')" />
+        <weui-button
+          class="weui-btn_margin-reset"
+          text="按钮"
+          type="default"
+          size="mini"
+          :block="false"
+          @click="handleClick('mini-margin-default')"
+        />
+        <weui-button
+          class="weui-btn_margin-reset"
+          text="按钮"
+          type="primary"
+          size="mini"
+          :block="false"
+          @click="handleClick('mini-margin-primary')"
+        />
+        <weui-button
+          class="weui-btn_margin-reset"
+          text="按钮"
+          type="warn"
+          size="mini"
+          :block="false"
+          @click="handleClick('mini-margin-warn')"
+        />
       </view>
     </view>
   </view>
@@ -70,10 +140,10 @@ export default {
       uni.showToast({
         title: `点击: ${type}`,
         icon: 'none',
-      })
+      });
     },
   },
-}
+};
 </script>
 
 <style>

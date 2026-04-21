@@ -5,22 +5,60 @@
       <view class="page__desc">半屏组件</view>
     </view>
     <view class="page__bd page__bd_spacing">
-      <button class="weui-btn weui-btn_default" hover-class="weui-btn_active" @click="showDialog('dialog1')">样式一</button>
-      <button class="weui-btn weui-btn_default" hover-class="weui-btn_active" @click="showDialog('dialog2')">样式二</button>
-      <button class="weui-btn weui-btn_default" hover-class="weui-btn_active" @click="showDialog('dialog3')">样式三</button>
-      <button class="weui-btn weui-btn_default" hover-class="weui-btn_active" @click="showDialog('dialog4')">样式四</button>
-      <button class="weui-btn weui-btn_default" hover-class="weui-btn_active" @click="showDialog('dialog5')">样式五</button>
+      <button
+        class="weui-btn weui-btn_default"
+        hover-class="weui-btn_active"
+        @click="showDialog('dialog1')"
+      >
+        样式一
+      </button>
+      <button
+        class="weui-btn weui-btn_default"
+        hover-class="weui-btn_active"
+        @click="showDialog('dialog2')"
+      >
+        样式二
+      </button>
+      <button
+        class="weui-btn weui-btn_default"
+        hover-class="weui-btn_active"
+        @click="showDialog('dialog3')"
+      >
+        样式三
+      </button>
+      <button
+        class="weui-btn weui-btn_default"
+        hover-class="weui-btn_active"
+        @click="showDialog('dialog4')"
+      >
+        样式四
+      </button>
+      <button
+        class="weui-btn weui-btn_default"
+        hover-class="weui-btn_active"
+        @click="showDialog('dialog5')"
+      >
+        样式五
+      </button>
     </view>
 
-    <weui-half-screen-dialog
-      v-model="dialog1"
-      title="标题"
-      subtitle="副标题"
-    >
+    <weui-half-screen-dialog v-model="dialog1" title="标题" subtitle="副标题">
       <template #right>
         <view class="weui-half-screen-dialog__hd__action-group">
-          <button class="weui-half-screen-dialog__hd__action weui-btn_icon weui-wa-hotarea" hover-class="none">搜索<text class="weui-icon-search" /></button>
-          <button class="weui-half-screen-dialog__hd__action weui-btn_icon weui-wa-hotarea" hover-class="none">更多<text class="weui-icon-more" /></button>
+          <button
+            class="weui-half-screen-dialog__hd__action weui-btn_icon weui-wa-hotarea"
+            hover-class="none"
+          >
+            搜索
+            <text class="weui-icon-search" />
+          </button>
+          <button
+            class="weui-half-screen-dialog__hd__action weui-btn_icon weui-wa-hotarea"
+            hover-class="none"
+          >
+            更多
+            <text class="weui-icon-more" />
+          </button>
           <text class="weui-half-screen-dialog__hd__action weui-link weui-wa-hotarea">完成</text>
         </view>
       </template>
@@ -37,16 +75,27 @@
       :actions="nextActions"
     >
       <template #right>
-        <button class="weui-btn_icon weui-wa-hotarea" hover-class="none">更多<text class="weui-icon-more" /></button>
+        <button class="weui-btn_icon weui-wa-hotarea" hover-class="none">
+          更多
+          <text class="weui-icon-more" />
+        </button>
       </template>
       <view class="weui-half-screen-dialog__desc">辅助描述内容，可根据实际需要安排</view>
       <view class="weui-half-screen-dialog__tips">
-        辅助提示内容，可根据实际需要安排
-        Dolor adipisci quidem consequuntur similique consequuntur doloribus modi possimus sunt voluptas qui Aspernatur natus error quisquam quidem ipsa corrupti! Dignissimos quasi quis natus fugiat odio in? Mollitia molestias error earum.
-        Dolor adipisci quidem consequuntur similique consequuntur doloribus modi possimus sunt voluptas qui Aspernatur natus error quisquam quidem ipsa corrupti! Dignissimos quasi quis natus fugiat odio in? Mollitia molestias error earum.
-        Dolor adipisci quidem consequuntur similique consequuntur doloribus modi possimus sunt voluptas qui Aspernatur natus error quisquam quidem ipsa corrupti! Dignissimos quasi quis natus fugiat odio in? Mollitia molestias error earum.
-        Dolor adipisci quidem consequuntur similique consequuntur doloribus modi possimus sunt voluptas qui Aspernatur natus error quisquam quidem ipsa corrupti! Dignissimos quasi quis natus fugiat odio in? Mollitia molestias error earum.
-        Dolor adipisci quidem consequuntur similique consequuntur doloribus modi possimus sunt voluptas qui Aspernatur natus error quisquam quidem ipsa corrupti! Dignissimos quasi quis natus fugiat odio in? Mollitia molestias error earum.
+        辅助提示内容，可根据实际需要安排 Dolor adipisci quidem consequuntur similique consequuntur
+        doloribus modi possimus sunt voluptas qui Aspernatur natus error quisquam quidem ipsa
+        corrupti! Dignissimos quasi quis natus fugiat odio in? Mollitia molestias error earum. Dolor
+        adipisci quidem consequuntur similique consequuntur doloribus modi possimus sunt voluptas
+        qui Aspernatur natus error quisquam quidem ipsa corrupti! Dignissimos quasi quis natus
+        fugiat odio in? Mollitia molestias error earum. Dolor adipisci quidem consequuntur similique
+        consequuntur doloribus modi possimus sunt voluptas qui Aspernatur natus error quisquam
+        quidem ipsa corrupti! Dignissimos quasi quis natus fugiat odio in? Mollitia molestias error
+        earum. Dolor adipisci quidem consequuntur similique consequuntur doloribus modi possimus
+        sunt voluptas qui Aspernatur natus error quisquam quidem ipsa corrupti! Dignissimos quasi
+        quis natus fugiat odio in? Mollitia molestias error earum. Dolor adipisci quidem
+        consequuntur similique consequuntur doloribus modi possimus sunt voluptas qui Aspernatur
+        natus error quisquam quidem ipsa corrupti! Dignissimos quasi quis natus fugiat odio in?
+        Mollitia molestias error earum.
       </view>
     </weui-half-screen-dialog>
 
@@ -88,7 +137,8 @@
       <view class="weui-form__tips__group">
         <view class="weui-form__tips__wrp">
           <weui-agree v-model="agreeTerms">
-            阅读并同意<text class="weui-link">《相关条款》</text>
+            阅读并同意
+            <text class="weui-link">《相关条款》</text>
           </weui-agree>
         </view>
         <view class="weui-form__tips__wrp">
@@ -97,17 +147,29 @@
       </view>
     </weui-half-screen-dialog>
 
-    <weui-half-screen-dialog
-      v-model="dialog5"
-      title="标题"
-      close-icon="slide-down"
-      grab
-    >
+    <weui-half-screen-dialog v-model="dialog5" title="标题" close-icon="slide-down" grab>
       <template #right>
         <view class="weui-half-screen-dialog__hd__action-group">
-          <button class="weui-half-screen-dialog__hd__action weui-btn_icon weui-wa-hotarea" hover-class="none">搜索<text class="weui-icon-search" /></button>
-          <button class="weui-half-screen-dialog__hd__action weui-btn_icon weui-wa-hotarea" hover-class="none">更多<text class="weui-icon-more" /></button>
-          <button class="weui-half-screen-dialog__hd__action weui-btn weui-btn_primary weui-btn_xmini" hover-class="weui-btn_active">完成</button>
+          <button
+            class="weui-half-screen-dialog__hd__action weui-btn_icon weui-wa-hotarea"
+            hover-class="none"
+          >
+            搜索
+            <text class="weui-icon-search" />
+          </button>
+          <button
+            class="weui-half-screen-dialog__hd__action weui-btn_icon weui-wa-hotarea"
+            hover-class="none"
+          >
+            更多
+            <text class="weui-icon-more" />
+          </button>
+          <button
+            class="weui-half-screen-dialog__hd__action weui-btn weui-btn_primary weui-btn_xmini"
+            hover-class="weui-btn_active"
+          >
+            完成
+          </button>
         </view>
       </template>
       <view class="demo-space" />

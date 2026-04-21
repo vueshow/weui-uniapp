@@ -42,11 +42,12 @@
 </template>
 
 <script>
-const createSteps = (successCount = 0) => Array.from({ length: 4 }, (_, index) => ({
-  title: '标题',
-  desc: '描述内容详情',
-  success: index < successCount,
-}));
+const createSteps = (successCount = 0) =>
+  Array.from({ length: 4 }, (_, index) => ({
+    title: '标题',
+    desc: '描述内容详情',
+    success: index < successCount,
+  }));
 
 export default {
   data() {

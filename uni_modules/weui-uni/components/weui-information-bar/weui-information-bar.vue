@@ -1,10 +1,5 @@
 <template>
-  <view
-    v-if="visible"
-    role="alert"
-    class="weui-information-bar"
-    :class="barClass"
-  >
+  <view v-if="visible" role="alert" class="weui-information-bar" :class="barClass">
     <view v-if="showIcon || $slots.left" class="weui-information-bar__hd">
       <slot name="left">
         <text :class="icon" />
@@ -16,13 +11,9 @@
     <view v-if="linkText || closeable || $slots.right" class="weui-information-bar__ft">
       <slot name="right">
         <text v-if="linkText" class="weui-link" @click.stop="handleLink">{{ linkText }}</text>
-        <view
-          v-if="closeable"
-          class="weui-btn_icon"
-          role="button"
-          @click.stop="close"
-        >
-          关闭<text class="weui-icon-close-thin" />
+        <view v-if="closeable" class="weui-btn_icon" role="button" @click.stop="close">
+          关闭
+          <text class="weui-icon-close-thin" />
         </view>
       </slot>
     </view>
@@ -48,13 +39,8 @@ export default {
     type: {
       type: String,
       default: 'warn-strong',
-      validator: (value) => [
-        'warn-strong',
-        'warn-weak',
-        'warn-no-color',
-        'tips-strong',
-        'tips-weak',
-      ].includes(value),
+      validator: (value) =>
+        ['warn-strong', 'warn-weak', 'warn-no-color', 'tips-strong', 'tips-weak'].includes(value),
     },
     icon: {
       type: String,
@@ -111,6 +97,6 @@ export default {
 
 <style lang="scss">
 /* #ifdef MP */
-@import "../../styles/mp.scss";
+@import '../../styles/mp.scss';
 /* #endif */
 </style>

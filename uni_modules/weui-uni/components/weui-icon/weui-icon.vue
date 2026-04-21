@@ -1,10 +1,5 @@
 <template>
-  <view
-    role="img"
-    :aria-label="label || type"
-    class="weui-icon"
-    :class="iconClass"
-  />
+  <view role="img" :aria-label="label || type" class="weui-icon" :class="iconClass" />
 </template>
 
 <script>
@@ -53,6 +48,6 @@ export default {
 
 <style lang="scss">
 /* #ifdef MP */
-@import "../../styles/mp.scss";
+@import '../../styles/mp.scss';
 /* #endif */
 </style>

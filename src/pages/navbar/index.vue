@@ -17,9 +17,21 @@ export default {
     return {
       activeTab: 'one',
       items: [
-        { label: '选项一', value: 'one', text: 'Sit sit quibusdam assumenda facilis magnam temporibus.' },
-        { label: '选项二', value: 'two', text: 'Consectetur neque facere modi recusandae tempore.' },
-        { label: '选项三', value: 'three', text: 'Dolor magnam expedita ex beatae maiores assumenda.' },
+        {
+          label: '选项一',
+          value: 'one',
+          text: 'Sit sit quibusdam assumenda facilis magnam temporibus.',
+        },
+        {
+          label: '选项二',
+          value: 'two',
+          text: 'Consectetur neque facere modi recusandae tempore.',
+        },
+        {
+          label: '选项三',
+          value: 'three',
+          text: 'Dolor magnam expedita ex beatae maiores assumenda.',
+        },
       ],
     };
   },

@@ -38,16 +38,8 @@ const demoImage = '/static/logo.png';
 export default {
   data() {
     return {
-      files: [
-        { url: demoImage },
-        { url: demoImage },
-        { url: demoImage, status: '50%' },
-      ],
-      filesWithDelete: [
-        { url: demoImage },
-        { url: demoImage },
-        { url: demoImage, status: '50%' },
-      ],
+      files: [{ url: demoImage }, { url: demoImage }, { url: demoImage, status: '50%' }],
+      filesWithDelete: [{ url: demoImage }, { url: demoImage }, { url: demoImage, status: '50%' }],
     };
   },
   methods: {
