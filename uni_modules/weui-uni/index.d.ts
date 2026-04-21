@@ -192,6 +192,12 @@ export type WeuiCellProps = {
   border?: boolean;
   active?: boolean;
   extraClass?: string;
+  isLink?: boolean;
+  size?: '' | 'large';
+  required?: boolean;
+  disabled?: boolean;
+  center?: boolean;
+  arrowDirection?: 'right' | 'left' | 'up' | 'down';
 };
 
 // --- WeuiCheckbox ---
