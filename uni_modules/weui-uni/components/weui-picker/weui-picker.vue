@@ -328,10 +328,18 @@ export default {
       this.animating = false;
       this.draftValue = this.getInitialValue();
       this.$nextTick(() => {
+        // #ifdef H5
         requestAnimationFrame(() => {
           this.animating = true;
           this.opened = true;
         });
+        // #endif
+        // #ifndef H5
+        setTimeout(() => {
+          this.animating = true;
+          this.opened = true;
+        }, 17);
+        // #endif
       });
     },
     closeWithTransition() {

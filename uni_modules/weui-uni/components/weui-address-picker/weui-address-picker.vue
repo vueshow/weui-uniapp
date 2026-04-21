@@ -313,10 +313,18 @@ export default {
       this.levelCount = this.computeLevelCount(this.resolvedOptions);
       this.draftValue = this.getInitialDraftValue();
       this.$nextTick(() => {
+        // #ifdef H5
         requestAnimationFrame(() => {
           this.animating = true;
           this.opened = true;
         });
+        // #endif
+        // #ifndef H5
+        setTimeout(() => {
+          this.animating = true;
+          this.opened = true;
+        }, 17);
+        // #endif
       });
     },
     closeWithTransition() {

@@ -1,6 +1,10 @@
 {
 	"easycom": {
-		"autoscan": true
+		"autoscan": true,
+		"custom": {
+			// 本地 uni_modules 方式
+			"^weui-(.*)$": "uni_modules/weui-uni/components/weui-$1/weui-$1.vue"
+		}
 	},
 	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
 		{
