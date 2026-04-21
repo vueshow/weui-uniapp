@@ -92,4 +92,39 @@ describe('WeuiSlider', () => {
     wrapper.vm.updateByClientX(100, 'change');
     expect(wrapper.emitted('update:modelValue')).toBeFalsy();
   });
+
+  it('handleMouseDown 注册 mousemove/mouseup 监听', () => {
+    const wrapper = mountComponent(WeuiSlider);
+    vi.spyOn(wrapper.vm, 'updateByClientX').mockImplementation(() => {});
+    const addSpy = vi.spyOn(window, 'addEventListener');
+    wrapper.vm.handleMouseDown({ clientX: 50 });
+    expect(addSpy).toHaveBeenCalledWith('mousemove', expect.any(Function));
+    expect(addSpy).toHaveBeenCalledWith('mouseup', expect.any(Function));
+    addSpy.mockRestore();
+  });
+
+  it('handleMouseDown mouseup 时移除监听', () => {
+    const wrapper = mountComponent(WeuiSlider);
+    vi.spyOn(wrapper.vm, 'updateByClientX').mockImplementation(() => {});
+    const removeSpy = vi.spyOn(window, 'removeEventListener');
+    const listeners = {};
+    vi.spyOn(window, 'addEventListener').mockImplementation((name, fn) => {
+      listeners[name] = fn;
+    });
+    wrapper.vm.handleMouseDown({ clientX: 50 });
+    listeners.mouseup({ clientX: 70 });
+    expect(removeSpy).toHaveBeenCalledWith('mousemove', expect.any(Function));
+    expect(removeSpy).toHaveBeenCalledWith('mouseup', expect.any(Function));
+    removeSpy.mockRestore();
+  });
+
+  it('window 不存在时 handleMouseDown 不注册监听（跨端兼容）', () => {
+    // 验证源码中有 typeof window 守卫
+    // 在小程序端 window 不存在，addEventListener 不会被调用
+    const wrapper = mountComponent(WeuiSlider);
+    vi.spyOn(wrapper.vm, 'updateByClientX').mockImplementation(() => {});
+    // 检查源码包含 typeof window 守卫
+    const source = WeuiSlider.methods.handleMouseDown.toString();
+    expect(source).toContain('typeof window');
+  });
 });

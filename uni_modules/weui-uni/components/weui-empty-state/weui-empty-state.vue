@@ -76,7 +76,7 @@ export default {
   min-height: 100%;
   padding: 88px 40px 40px;
   text-align: center;
-  color: var(--weui-FG-0);
+  color: rgba(0, 0, 0, 0.9);
 }
 
 .weui-empty-state__icon {
@@ -96,7 +96,7 @@ export default {
 
 .weui-empty-state__desc {
   margin-top: 16px;
-  color: var(--weui-FG-1);
+  color: rgba(0, 0, 0, 0.55);
   font-size: 17px;
   line-height: 1.4;
 }
@@ -115,7 +115,7 @@ export default {
 
 .weui-empty-state__extra-area {
   margin-top: 32px;
-  color: var(--weui-FG-2);
+  color: rgba(0, 0, 0, 0.3);
   font-size: 14px;
   line-height: 1.4;
 }

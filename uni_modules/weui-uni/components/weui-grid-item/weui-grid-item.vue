@@ -44,7 +44,7 @@ export default {
 }
 
 .weui-grid_active {
-  background-color: var(--weui-BG-COLOR-ACTIVE);
+  background-color: rgba(0, 0, 0, 0.05);
 }
 
 .weui-grid__icon {

@@ -18,7 +18,7 @@ export default {
 .weui-grids {
   display: block;
   clear: both;
-  background-color: var(--weui-BG-2);
+  background-color: #fff;
 }
 </style>
 

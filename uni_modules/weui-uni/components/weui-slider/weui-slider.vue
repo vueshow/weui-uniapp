@@ -108,7 +108,7 @@ export default {
     },
     handleMouseDown(event) {
       this.updateByClientX(event.clientX, 'changing');
-      // #ifdef H5
+      if (typeof window === 'undefined') return;
       const handleMouseMove = (moveEvent) => {
         this.updateByClientX(moveEvent.clientX, 'changing');
       };
@@ -119,7 +119,6 @@ export default {
       };
       window.addEventListener('mousemove', handleMouseMove);
       window.addEventListener('mouseup', handleMouseUp);
-      // #endif
     },
   },
 };

@@ -51,12 +51,12 @@ export default {
 
 <style scoped>
 .weui-badge_primary {
-  background-color: var(--weui-BRAND);
+  background-color: #07c160;
 }
 
 .weui-badge_default {
-  color: var(--weui-FG-1);
-  background-color: var(--weui-FG-3);
+  color: rgba(0, 0, 0, 0.55);
+  background-color: rgba(0, 0, 0, 0.1);
 }
 </style>
 

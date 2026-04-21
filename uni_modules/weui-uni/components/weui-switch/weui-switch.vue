@@ -54,7 +54,7 @@ export default {
 }
 
 .weui-switch-cp__box_checked {
-  background-color: var(--weui-BRAND);
+  background-color: #07c160;
 }
 
 .weui-switch-cp__box_checked::after {

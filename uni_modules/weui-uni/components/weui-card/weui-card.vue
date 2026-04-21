@@ -94,7 +94,7 @@ export default {
 
 <style scoped>
 .weui-media-box_active {
-  background-color: var(--weui-BG-COLOR-ACTIVE);
+  background-color: rgba(0, 0, 0, 0.05);
 }
 </style>
 

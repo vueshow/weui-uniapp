@@ -101,7 +101,7 @@ export default {
 
 .weui-loading-wrap__text {
   margin-left: 8px;
-  color: var(--weui-FG-1);
+  color: rgba(0, 0, 0, 0.55);
   font-size: 14px;
 }
 

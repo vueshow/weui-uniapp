@@ -125,11 +125,11 @@ export default {
 }
 
 .weui-toptips_info {
-  background-color: var(--weui-BLUE);
+  background-color: #10aeff;
 }
 
 .weui-toptips_success {
-  background-color: var(--weui-BRAND);
+  background-color: #07c160;
 }
 </style>
 
