@@ -61,7 +61,16 @@ body {
   font-family: system-ui,-apple-system,"Helvetica Neue",sans-serif;
 }
 
-* {
+page,
+view,
+text,
+button,
+input,
+textarea,
+image,
+scroll-view,
+navigator,
+form {
   margin: 0;
   padding: 0;
   outline: 0;
@@ -4083,7 +4092,10 @@ page,body {
   font-size: 17px;
 }
 
-.weui-article * {
+.weui-article view,
+.weui-article text,
+.weui-article image,
+.weui-article navigator {
   max-width: 100%;
   box-sizing: border-box;
   word-wrap: break-word;
