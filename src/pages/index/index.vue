@@ -37,10 +37,10 @@
                 role="menuitem"
                 @click="go(item.path)"
               >
-                <view class="weui-cell__bd">
+                <view class="weui-cell__label">
                   <view>{{ item.name }}</view>
                 </view>
-                <view class="weui-cell__ft" />
+                <view class="weui-cell__right" />
               </view>
             </view>
           </view>

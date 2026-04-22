@@ -4,7 +4,7 @@
     :class="{ 'weui-cell_disabled': disabled }"
     @click="handleToggle"
   >
-    <view class="weui-cell__hd">
+    <view class="weui-weui-cell__label">
       <checkbox
         class="weui-check"
         :checked="checked"
@@ -15,7 +15,7 @@
       />
       <text class="weui-icon-checked" />
     </view>
-    <view class="weui-cell__bd">
+    <view class="weui-cell__label">
       <slot>{{ label }}</slot>
     </view>
   </view>

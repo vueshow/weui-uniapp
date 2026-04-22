@@ -4,10 +4,10 @@
     :class="{ 'weui-cell_disabled': disabled }"
     @click="handleSelect"
   >
-    <view class="weui-cell__bd">
+    <view class="weui-cell__label">
       <slot>{{ label }}</slot>
     </view>
-    <view class="weui-cell__ft">
+    <view class="weui-cell__right">
       <radio
         class="weui-check"
         :checked="checked"

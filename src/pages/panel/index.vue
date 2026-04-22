@@ -17,8 +17,8 @@
         />
         <template #footer>
           <view class="weui-cell weui-cell_active weui-cell_access weui-cell_link">
-            <view class="weui-cell__bd">查看更多</view>
-            <view class="weui-cell__ft" />
+            <view class="weui-cell__label">查看更多</view>
+            <view class="weui-cell__right" />
           </view>
         </template>
       </weui-panel>
@@ -32,8 +32,8 @@
         />
         <template #footer>
           <view class="weui-cell weui-cell_active weui-cell_access weui-cell_link">
-            <view class="weui-cell__bd">查看更多</view>
-            <view class="weui-cell__ft" />
+            <view class="weui-cell__label">查看更多</view>
+            <view class="weui-cell__right" />
           </view>
         </template>
       </weui-panel>
@@ -46,13 +46,13 @@
               :key="item"
               class="weui-cell weui-cell_active weui-cell_access weui-cell_example"
             >
-              <view class="weui-cell__hd">
+              <view class="weui-weui-cell__label">
                 <image class="small-thumb" src="/static/logo.png" mode="aspectFill" />
               </view>
-              <view class="weui-cell__bd weui-cell_primary">
+              <view class="weui-cell__label weui-cell_primary">
                 <view>{{ item }}</view>
               </view>
-              <view class="weui-cell__ft" />
+              <view class="weui-cell__right" />
             </view>
           </view>
         </view>

@@ -1,290 +1,252 @@
 {
-	"easycom": {
-		"autoscan": true,
-		"custom": {
-			// 本地 uni_modules 方式
-			"^weui-(.*)$": "uni_modules/weui-uni/components/weui-$1/weui-$1.vue"
-		}
-	},
-	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
-		{
-			"path": "pages/index/index",
-			"style": {
-				"navigationBarTitleText": "WeUI UniApp",
-				"navigationStyle": "custom"
-			}
-		},
-		{
-			"path": "pages/button/index",
-			"style": {
-				"navigationBarTitleText": "Button 按钮",
-				"navigationStyle": "custom"
-			}
-		},
-		{
-			"path": "pages/loading/index",
-			"style": {
-				"navigationBarTitleText": "Loading 正在加载",
-				"navigationStyle": "custom"
-			}
-		},
-		{
-			"path": "pages/cell/index",
-			"style": {
-				"navigationBarTitleText": "Cell 列表项",
-				"navigationStyle": "custom"
-			}
-		},
-		{
-			"path": "pages/input/index",
-			"style": {
-				"navigationBarTitleText": "Input 输入框",
-				"navigationStyle": "custom"
-			}
-		},
-		{
-			"path": "pages/list/index",
-			"style": {
-				"navigationBarTitleText": "List 列表",
-				"navigationStyle": "custom"
-			}
-		},
-		{
-			"path": "pages/panel/index",
-			"style": {
-				"navigationBarTitleText": "Panel 面板",
-				"navigationStyle": "custom"
-			}
-		},
-		{
-			"path": "pages/toast/index",
-			"style": {
-				"navigationBarTitleText": "Toast 提示",
-				"navigationStyle": "custom"
-			}
-		},
-		{
-			"path": "pages/dialog/index",
-			"style": {
-				"navigationBarTitleText": "Dialog 对话框",
-				"navigationStyle": "custom"
-			}
-		},
-		{
-			"path": "pages/picker/index",
-			"style": {
-				"navigationBarTitleText": "Picker 选择器",
-				"navigationStyle": "custom"
-			}
-		},
-		{
-			"path": "pages/switch/index",
-			"style": {
-				"navigationBarTitleText": "Switch 开关",
-				"navigationStyle": "custom"
-			}
-		},
-		{
-			"path": "pages/checkbox/index",
-			"style": {
-				"navigationBarTitleText": "Checkbox 复选框",
-				"navigationStyle": "custom"
-			}
-		},
-		{
-			"path": "pages/radio/index",
-			"style": {
-				"navigationBarTitleText": "Radio 单选框",
-				"navigationStyle": "custom"
-			}
-		},
-		{
-			"path": "pages/slider/index",
-			"style": {
-				"navigationBarTitleText": "Slider 滑块",
-				"navigationStyle": "custom"
-			}
-		},
-		{
-			"path": "pages/uploader/index",
-			"style": {
-				"navigationBarTitleText": "Uploader 上传",
-				"navigationStyle": "custom"
-			}
-		},
-		{
-			"path": "pages/gallery/index",
-			"style": {
-				"navigationBarTitleText": "Gallery 画廊",
-				"navigationStyle": "custom"
-			}
-		},
-		{
-			"path": "pages/progress/index",
-			"style": {
-				"navigationBarTitleText": "Progress 进度条",
-				"navigationStyle": "custom"
-			}
-		},
-		{
-			"path": "pages/tabbar/index",
-			"style": {
-				"navigationBarTitleText": "Tabbar 底部导航",
-				"navigationStyle": "custom"
-			}
-		},
-		{
-			"path": "pages/navbar/index",
-			"style": {
-				"navigationBarTitleText": "Navbar 顶部导航",
-				"navigationStyle": "custom"
-			}
-		},
-		{
-			"path": "pages/grid/index",
-			"style": {
-				"navigationBarTitleText": "Grid 九宫格",
-				"navigationStyle": "custom"
-			}
-		},
-		{
-			"path": "pages/article/index",
-			"style": {
-				"navigationBarTitleText": "Article 文章",
-				"navigationStyle": "custom"
-			}
-		},
-		{
-			"path": "pages/footer/index",
-			"style": {
-				"navigationBarTitleText": "Footer 页脚",
-				"navigationStyle": "custom"
-			}
-		},
-		{
-			"path": "pages/flex/index",
-			"style": {
-				"navigationBarTitleText": "Flex 布局",
-				"navigationStyle": "custom"
-			}
-		},
-		{
-			"path": "pages/actionsheet/index",
-			"style": {
-				"navigationBarTitleText": "ActionSheet 弹出菜单",
-				"navigationStyle": "custom"
-			}
-		},
-		{
-			"path": "pages/msg/index",
-			"style": {
-				"navigationBarTitleText": "Msg 提示页",
-				"navigationStyle": "custom"
-			}
-		},
-		{
-			"path": "pages/searchbar/index",
-			"style": {
-				"navigationBarTitleText": "SearchBar 搜索栏",
-				"navigationStyle": "custom"
-			}
-		},
-		{
-			"path": "pages/form/index",
-			"style": {
-				"navigationBarTitleText": "Form 表单",
-				"navigationStyle": "custom"
-			}
-		},
-		{
-			"path": "pages/form-preview/index",
-			"style": {
-				"navigationBarTitleText": "Preview 表单预览",
-				"navigationStyle": "custom"
-			}
-		},
-		{
-			"path": "pages/toptips/index",
-			"style": {
-				"navigationBarTitleText": "Toptips 顶部提示",
-				"navigationStyle": "custom"
-			}
-		},
-		{
-			"path": "pages/badge/index",
-			"style": {
-				"navigationBarTitleText": "Badge 徽章",
-				"navigationStyle": "custom"
-			}
-		},
-		{
-			"path": "pages/loadmore/index",
-			"style": {
-				"navigationBarTitleText": "Loadmore 加载更多",
-				"navigationStyle": "custom"
-			}
-		},
-		{
-			"path": "pages/icons/index",
-			"style": {
-				"navigationBarTitleText": "Icons 图标",
-				"navigationStyle": "custom"
-			}
-		},
-		{
-			"path": "pages/half-screen-dialog/index",
-			"style": {
-				"navigationBarTitleText": "Half-screen Dialog 半屏组件",
-				"navigationStyle": "custom"
-			}
-		},
-		{
-			"path": "pages/agree/index",
-			"style": {
-				"navigationBarTitleText": "Agree 协议勾选",
-				"navigationStyle": "custom"
-			}
-		},
-		{
-			"path": "pages/information-bar/index",
-			"style": {
-				"navigationBarTitleText": "Information Bar 信息提示条",
-				"navigationStyle": "custom"
-			}
-		},
-		{
-			"path": "pages/list-tips/index",
-			"style": {
-				"navigationBarTitleText": "List Tips 列表提示",
-				"navigationStyle": "custom"
-			}
-		},
-		{
-			"path": "pages/steps/index",
-			"style": {
-				"navigationBarTitleText": "Steps 步骤条",
-				"navigationStyle": "custom"
-			}
-		},
-		{
-			"path": "pages/empty-state/index",
-			"style": {
-				"navigationBarTitleText": "Empty State 空状态",
-				"navigationStyle": "custom"
-			}
-		},
-		{
-			"path": "pages/address-picker/index",
-			"style": {
-				"navigationBarTitleText": "Address Picker 地址选择",
-				"navigationStyle": "custom"
-			}
-		}
-	],
-	"globalStyle": {
-		"navigationBarTextStyle": "black",
-		"navigationBarTitleText": "WeUI UniApp",
-		"navigationBarBackgroundColor": "#F8F8F8",
-		"backgroundColor": "#F8F8F8"
-	}
+  "easycom": {
+    "autoscan": true,
+    "custom": {
+      // 本地 uni_modules 方式
+      "^weui-(.*)$": "uni_modules/weui-uni/components/weui-$1/weui-$1.vue"
+    }
+  },
+  "pages": [
+    //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+    {
+      "path": "pages/index/index",
+      "style": {
+        "navigationBarTitleText": "WeUI UniApp"
+      }
+    },
+    {
+      "path": "pages/button/index",
+      "style": {
+        "navigationBarTitleText": "Button 按钮"
+      }
+    },
+    {
+      "path": "pages/loading/index",
+      "style": {
+        "navigationBarTitleText": "Loading 正在加载"
+      }
+    },
+    {
+      "path": "pages/cell/index",
+      "style": {
+        "navigationBarTitleText": "Cell 列表项"
+      }
+    },
+    {
+      "path": "pages/input/index",
+      "style": {
+        "navigationBarTitleText": "Input 输入框"
+      }
+    },
+    {
+      "path": "pages/list/index",
+      "style": {
+        "navigationBarTitleText": "List 列表"
+      }
+    },
+    {
+      "path": "pages/panel/index",
+      "style": {
+        "navigationBarTitleText": "Panel 面板"
+      }
+    },
+    {
+      "path": "pages/toast/index",
+      "style": {
+        "navigationBarTitleText": "Toast 提示"
+      }
+    },
+    {
+      "path": "pages/dialog/index",
+      "style": {
+        "navigationBarTitleText": "Dialog 对话框"
+      }
+    },
+    {
+      "path": "pages/picker/index",
+      "style": {
+        "navigationBarTitleText": "Picker 选择器"
+      }
+    },
+    {
+      "path": "pages/switch/index",
+      "style": {
+        "navigationBarTitleText": "Switch 开关"
+      }
+    },
+    {
+      "path": "pages/checkbox/index",
+      "style": {
+        "navigationBarTitleText": "Checkbox 复选框"
+      }
+    },
+    {
+      "path": "pages/radio/index",
+      "style": {
+        "navigationBarTitleText": "Radio 单选框"
+      }
+    },
+    {
+      "path": "pages/slider/index",
+      "style": {
+        "navigationBarTitleText": "Slider 滑块"
+      }
+    },
+    {
+      "path": "pages/uploader/index",
+      "style": {
+        "navigationBarTitleText": "Uploader 上传"
+      }
+    },
+    {
+      "path": "pages/gallery/index",
+      "style": {
+        "navigationBarTitleText": "Gallery 画廊"
+      }
+    },
+    {
+      "path": "pages/progress/index",
+      "style": {
+        "navigationBarTitleText": "Progress 进度条"
+      }
+    },
+    {
+      "path": "pages/tabbar/index",
+      "style": {
+        "navigationBarTitleText": "Tabbar 底部导航"
+      }
+    },
+    {
+      "path": "pages/navbar/index",
+      "style": {
+        "navigationBarTitleText": "Navbar 顶部导航"
+      }
+    },
+    {
+      "path": "pages/grid/index",
+      "style": {
+        "navigationBarTitleText": "Grid 九宫格"
+      }
+    },
+    {
+      "path": "pages/article/index",
+      "style": {
+        "navigationBarTitleText": "Article 文章"
+      }
+    },
+    {
+      "path": "pages/footer/index",
+      "style": {
+        "navigationBarTitleText": "Footer 页脚"
+      }
+    },
+    {
+      "path": "pages/flex/index",
+      "style": {
+        "navigationBarTitleText": "Flex 布局"
+      }
+    },
+    {
+      "path": "pages/actionsheet/index",
+      "style": {
+        "navigationBarTitleText": "ActionSheet 弹出菜单"
+      }
+    },
+    {
+      "path": "pages/msg/index",
+      "style": {
+        "navigationBarTitleText": "Msg 提示页"
+      }
+    },
+    {
+      "path": "pages/searchbar/index",
+      "style": {
+        "navigationBarTitleText": "SearchBar 搜索栏"
+      }
+    },
+    {
+      "path": "pages/form/index",
+      "style": {
+        "navigationBarTitleText": "Form 表单"
+      }
+    },
+    {
+      "path": "pages/form-preview/index",
+      "style": {
+        "navigationBarTitleText": "Preview 表单预览"
+      }
+    },
+    {
+      "path": "pages/toptips/index",
+      "style": {
+        "navigationBarTitleText": "Toptips 顶部提示"
+      }
+    },
+    {
+      "path": "pages/badge/index",
+      "style": {
+        "navigationBarTitleText": "Badge 徽章"
+      }
+    },
+    {
+      "path": "pages/loadmore/index",
+      "style": {
+        "navigationBarTitleText": "Loadmore 加载更多"
+      }
+    },
+    {
+      "path": "pages/icons/index",
+      "style": {
+        "navigationBarTitleText": "Icons 图标"
+      }
+    },
+    {
+      "path": "pages/half-screen-dialog/index",
+      "style": {
+        "navigationBarTitleText": "Half-screen Dialog 半屏组件"
+      }
+    },
+    {
+      "path": "pages/agree/index",
+      "style": {
+        "navigationBarTitleText": "Agree 协议勾选"
+      }
+    },
+    {
+      "path": "pages/information-bar/index",
+      "style": {
+        "navigationBarTitleText": "Information Bar 信息提示条"
+      }
+    },
+    {
+      "path": "pages/list-tips/index",
+      "style": {
+        "navigationBarTitleText": "List Tips 列表提示"
+      }
+    },
+    {
+      "path": "pages/steps/index",
+      "style": {
+        "navigationBarTitleText": "Steps 步骤条"
+      }
+    },
+    {
+      "path": "pages/empty-state/index",
+      "style": {
+        "navigationBarTitleText": "Empty State 空状态"
+      }
+    },
+    {
+      "path": "pages/address-picker/index",
+      "style": {
+        "navigationBarTitleText": "Address Picker 地址选择"
+      }
+    }
+  ],
+  "globalStyle": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "WeUI UniApp",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8"
+  }
 }
